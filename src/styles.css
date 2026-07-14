@@ -1,0 +1,107 @@
+:root {
+  --bg: #0f1115;
+  --card: #171a21;
+  --card-2: #1e222b;
+  --text: #e6e8eb;
+  --muted: #9aa2ad;
+  --accent: #4f7cff;
+  --border: #262b35;
+  --ok: #30a46c;
+  --bad: #e5484d;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --card-2: #f0f2f5;
+    --text: #1a1d23;
+    --muted: #667085;
+    --border: #e3e6ea;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.app { max-width: 760px; margin: 0 auto; padding: 16px; }
+
+.topbar {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 12px; padding: 8px 4px 16px;
+}
+.topbar h1 { font-size: 1.25rem; margin: 0; }
+
+.muted { color: var(--muted); font-size: 0.875rem; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+.card h2 { margin: 0 0 12px; font-size: 1.05rem; }
+
+button {
+  font: inherit; cursor: pointer; border: 1px solid var(--border);
+  background: var(--card-2); color: var(--text);
+  border-radius: 9px; padding: 10px 14px; transition: 0.12s;
+}
+button:hover:not(:disabled) { border-color: var(--accent); }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+
+button.primary { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 600; }
+button.warn { border-color: #f5a524; }
+button.ghost { background: transparent; }
+
+.btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-row.end { justify-content: flex-end; margin-top: 16px; }
+
+.cat-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.cat-btn { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 10px; text-align: left; }
+.cat-name { font-weight: 500; display: inline-flex; align-items: center; gap: 8px; }
+.cat-dot { width: 10px; height: 10px; border-radius: 99px; flex: 0 0 auto; display: inline-block; }
+
+/* estudo */
+.study-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.progress-bar { height: 8px; background: var(--card-2); border-radius: 99px; overflow: hidden; margin-bottom: 16px; }
+.progress-fill { height: 100%; background: var(--accent); transition: width 0.2s; }
+
+.tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.tag { font-size: 0.75rem; padding: 3px 9px; border-radius: 99px; background: var(--accent); color: #fff; }
+.tag.ghost-tag { background: var(--card-2); color: var(--muted); }
+.tag.difficulty { background: transparent; border: 1px solid; text-transform: capitalize; font-weight: 600; }
+
+.prompt { font-size: 1.1rem; margin: 0 0 16px; }
+
+.options { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.option { width: 100%; display: flex; gap: 12px; align-items: center; text-align: left; }
+.option .opt-key {
+  flex: 0 0 26px; height: 26px; display: grid; place-items: center;
+  border-radius: 6px; background: var(--card); border: 1px solid var(--border);
+  font-size: 0.8rem; font-weight: 600;
+}
+.option.selected { border-color: var(--accent); }
+.option.right { border-color: var(--ok); background: color-mix(in srgb, var(--ok) 14%, var(--card-2)); }
+.option.wrong { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 14%, var(--card-2)); }
+
+.feedback { margin-top: 16px; padding: 12px 14px; border-radius: 9px; border: 1px solid var(--border); }
+.feedback.ok { border-color: var(--ok); background: color-mix(in srgb, var(--ok) 10%, transparent); }
+.feedback.bad { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 10%, transparent); }
+.feedback p { margin: 6px 0 0; }
+
+/* relatório */
+.score { display: flex; align-items: baseline; gap: 12px; }
+.score .big { font-size: 2.5rem; font-weight: 700; }
+.report-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.report-row-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 6px; }
+.report-row-head > span:first-child { display: inline-flex; align-items: center; gap: 8px; }
+.review-list li { margin-bottom: 6px; }
