@@ -10730,5 +10730,1931 @@
     ],
     "explanation": "The correct order is: Identify the business outcome → Determine the input and output data types → Map the scenario to an AI workload → Review responsible AI risks → Select an Azure capability to evaluate. This sequence moves from requirement analysis to selection, testing, and responsible implementation.",
     "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q341",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "responsible AI - transparency",
+    "type": "single",
+    "prompt": "A software team building an AI assistant is preparing for Azure AI Fundamentals. The key requirement is to help users understand why an AI assistant produced a recommendation. What should be recommended? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Provide appropriate explanations, source references, limitations, and user guidance without exposing confidential internals."
+      },
+      {
+        "id": "b",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "c",
+        "text": "Hide all limitations so users trust the system."
+      },
+      {
+        "id": "d",
+        "text": "Reveal private system prompts to every user."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Transparency helps users understand AI behavior and limitations. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q342",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "responsible AI - accountability",
+    "type": "single",
+    "prompt": "A candidate must understand how to ensure someone is responsible for monitoring an AI solution after launch. Which statement is most accurate?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "b",
+        "text": "Avoid assigning owners because AI systems are automated."
+      },
+      {
+        "id": "c",
+        "text": "Define ownership, review processes, escalation paths, and audit records for model behavior and user impact."
+      },
+      {
+        "id": "d",
+        "text": "Use the model output as final truth without validation or human review."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Accountability means humans and organizations remain responsible for AI system outcomes. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q343",
+    "category": "computer-vision",
+    "difficulty": "easy",
+    "subtopic": "OCR",
+    "type": "single",
+    "prompt": "A data science learning team wants a fundamentals-level Azure AI solution that can classify a scenario where a system extracts text from scanned invoices. Which approach should be selected?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Choose the most complex model without evaluating the task requirements."
+      },
+      {
+        "id": "b",
+        "text": "Use the model output as final truth without validation or human review."
+      },
+      {
+        "id": "c",
+        "text": "Identify it as speech synthesis."
+      },
+      {
+        "id": "d",
+        "text": "Identify the workload as optical character recognition or document processing."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "OCR and document processing extract text and structured information from images or documents.",
+    "source": "AI-900"
+  },
+  {
+    "id": "q344",
+    "category": "machine-learning",
+    "difficulty": "easy",
+    "subtopic": "regression",
+    "type": "single",
+    "prompt": "During an AI-900 / AI-901 review, an enterprise knowledge-management group identifies a need to identify the correct ML task for predicting the sale price of a house. What is the best answer? Assume the goal is a fundamentals-level Microsoft Azure AI answer.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Store credentials directly in client-side application code."
+      },
+      {
+        "id": "b",
+        "text": "Use regression because the target is a continuous numeric value."
+      },
+      {
+        "id": "c",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "d",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Regression predicts continuous values such as prices, temperatures, or quantities. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900"
+  },
+  {
+    "id": "q345",
+    "category": "machine-learning",
+    "difficulty": "easy",
+    "subtopic": "binary classification",
+    "type": "single",
+    "prompt": "Which choice best satisfies the requirement to identify the correct ML task for predicting whether an email is spam or not spam for a business analyst?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      },
+      {
+        "id": "b",
+        "text": "Use binary classification because the model chooses between two categories."
+      },
+      {
+        "id": "c",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "d",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Classification predicts categories or labels. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900"
+  },
+  {
+    "id": "q346",
+    "category": "generative-ai",
+    "difficulty": "hard",
+    "subtopic": "model selection ordering",
+    "type": "single",
+    "prompt": "A legal operations team must select a generative AI model conceptually. Put the following steps in the MOST appropriate order: Choose deployment and monitoring approach; Review model capability and limitations; Test representative prompts; Consider safety and privacy requirements; Define task and required modality.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Define task and required modality → Review model capability and limitations → Consider safety and privacy requirements → Test representative prompts → Choose deployment and monitoring approach."
+      },
+      {
+        "id": "b",
+        "text": "Review model capability and limitations → Define task and required modality → Test representative prompts → Consider safety and privacy requirements → Choose deployment and monitoring approach."
+      },
+      {
+        "id": "c",
+        "text": "Choose deployment and monitoring approach → Define task and required modality → Review model capability and limitations → Consider safety and privacy requirements → Test representative prompts."
+      },
+      {
+        "id": "d",
+        "text": "Define task and required modality → Test representative prompts → Review model capability and limitations → Choose deployment and monitoring approach → Consider safety and privacy requirements."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The correct order is: Define task and required modality → Review model capability and limitations → Consider safety and privacy requirements → Test representative prompts → Choose deployment and monitoring approach. This sequence moves from requirement analysis to selection, testing, and responsible implementation.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q347",
+    "category": "machine-learning",
+    "difficulty": "medium",
+    "subtopic": "validation data",
+    "type": "single",
+    "prompt": "A logistics company needs to explain why validation data is used during model development. Which option is the BEST fit? Assume the goal is a fundamentals-level Microsoft Azure AI answer.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Validation data helps evaluate model performance on examples that were not used to train the model."
+      },
+      {
+        "id": "b",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "c",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "d",
+        "text": "Store credentials directly in client-side application code."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Using separate data helps estimate how well the model generalizes.",
+    "source": "AI-900"
+  },
+  {
+    "id": "q348",
+    "category": "machine-learning",
+    "difficulty": "easy",
+    "subtopic": "features and labels",
+    "type": "single",
+    "prompt": "A marketing analytics group is preparing for Azure AI Fundamentals. The key requirement is to identify features and labels in a supervised learning dataset. What should be recommended?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use the model output as final truth without validation or human review."
+      },
+      {
+        "id": "b",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "c",
+        "text": "Features are input variables used by the model, and the label is the value the model learns to predict."
+      },
+      {
+        "id": "d",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Supervised learning maps input features to known labels during training. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900"
+  },
+  {
+    "id": "q349",
+    "category": "generative-ai",
+    "difficulty": "easy",
+    "subtopic": "generative AI concepts",
+    "type": "single",
+    "prompt": "A candidate must understand how to identify what a generative AI model is designed to do. Which statement is most accurate? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Only sort records into pre-existing database tables."
+      },
+      {
+        "id": "b",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "c",
+        "text": "Generate new content such as text, images, audio, code, or structured responses based on learned patterns and prompts."
+      },
+      {
+        "id": "d",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Generative AI creates new outputs rather than only classifying or forecasting. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q350",
+    "category": "machine-learning",
+    "difficulty": "hard",
+    "subtopic": "ML concepts matching",
+    "type": "single",
+    "prompt": "A customer service department is reviewing AI concepts and workloads. Match each item to the most appropriate description: Regression, Classification, Clustering, OCR, Sentiment analysis.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Regression → Predicts continuous numeric values; Classification → Predicts categories or labels; Clustering → Finds groups in unlabeled data; OCR → Extracts text from images or documents; Sentiment analysis → Identifies positive, negative, or neutral tone."
+      },
+      {
+        "id": "b",
+        "text": "Regression → Predicts categories or labels; Classification → Predicts continuous numeric values; Clustering → Extracts text from images or documents; OCR → Finds groups in unlabeled data; Sentiment analysis → Identifies positive, negative, or neutral tone."
+      },
+      {
+        "id": "c",
+        "text": "Regression → Finds groups in unlabeled data; Classification → Identifies positive, negative, or neutral tone; Clustering → Predicts continuous numeric values; OCR → Predicts categories or labels; Sentiment analysis → Extracts text from images or documents."
+      },
+      {
+        "id": "d",
+        "text": "Regression → Extracts text from images or documents; Classification → Finds groups in unlabeled data; Clustering → Predicts categories or labels; OCR → Identifies positive, negative, or neutral tone; Sentiment analysis → Predicts continuous numeric values."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Correct matches: Regression → Predicts continuous numeric values; Classification → Predicts categories or labels; Clustering → Finds groups in unlabeled data; OCR → Extracts text from images or documents; Sentiment analysis → Identifies positive, negative, or neutral tone. These matches connect each concept or service to its primary purpose.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q351",
+    "category": "machine-learning",
+    "difficulty": "medium",
+    "subtopic": "model deployment",
+    "type": "single",
+    "prompt": "During an AI-900 / AI-901 review, a junior developer identifies a need to choose a deployment approach for an AI model that an application will call through an endpoint. What is the best answer?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use a spreadsheet as the runtime endpoint."
+      },
+      {
+        "id": "b",
+        "text": "Deploy the model to an approved endpoint and configure authentication, capacity, and monitoring for application use."
+      },
+      {
+        "id": "c",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "d",
+        "text": "Send all private customer data to the model regardless of user permissions."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Applications usually need a hosted model endpoint or managed service interface. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-901"
+  },
+  {
+    "id": "q352",
+    "category": "generative-ai",
+    "difficulty": "easy",
+    "subtopic": "temperature",
+    "type": "single",
+    "prompt": "Which choice best satisfies the requirement to understand the effect of temperature in a generative model request for a support operations team? Assume the goal is a fundamentals-level Microsoft Azure AI answer.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Store credentials directly in client-side application code."
+      },
+      {
+        "id": "b",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "c",
+        "text": "Temperature influences randomness or variety in generated output; lower values are usually more deterministic."
+      },
+      {
+        "id": "d",
+        "text": "Temperature guarantees factual correctness."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Generation parameters can affect style, determinism, and output length but do not replace validation. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-901"
+  },
+  {
+    "id": "q353",
+    "category": "computer-vision",
+    "difficulty": "easy",
+    "subtopic": "object detection",
+    "type": "single",
+    "prompt": "A financial services company needs to identify an appropriate workload for finding objects in images. Which option is the BEST fit?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use speech synthesis."
+      },
+      {
+        "id": "b",
+        "text": "Use key phrase extraction."
+      },
+      {
+        "id": "c",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "d",
+        "text": "Use object detection to locate and classify objects within images."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "Object detection identifies objects and their locations.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q354",
+    "category": "computer-vision",
+    "difficulty": "easy",
+    "subtopic": "image classification",
+    "type": "single",
+    "prompt": "A manufacturing team is preparing for Azure AI Fundamentals. The key requirement is to choose the correct computer vision task for assigning one label to an image. What should be recommended? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Send all private customer data to the model regardless of user permissions."
+      },
+      {
+        "id": "b",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "c",
+        "text": "Use image classification to assign the image to a category."
+      },
+      {
+        "id": "d",
+        "text": "Disable safety controls to reduce latency."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Image classification assigns categories to whole images. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q355",
+    "category": "computer-vision",
+    "difficulty": "medium",
+    "subtopic": "OCR",
+    "type": "multi",
+    "prompt": "A media company is reviewing an AI-900 / AI-901 topic to choose the right capability to read printed text from a photographed receipt. Which TWO choices are correct?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Transformers are only physical networking devices."
+      },
+      {
+        "id": "b",
+        "text": "Use optical character recognition to extract text from the image."
+      },
+      {
+        "id": "c",
+        "text": "Send all private customer data to the model regardless of user permissions."
+      },
+      {
+        "id": "d",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "e",
+        "text": "Transformers use attention mechanisms that help models process context and relationships in sequences."
+      }
+    ],
+    "correct": [
+      "b",
+      "e"
+    ],
+    "explanation": "OCR extracts text from images or scanned documents. Also, transformer architectures underpin many modern language and generative models. Both correct choices support the requirement; the distractors overcomplicate the solution, use the wrong modality, or bypass responsible AI practices.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q356",
+    "category": "nlp",
+    "difficulty": "easy",
+    "subtopic": "sentiment analysis",
+    "type": "single",
+    "prompt": "A legal operations team wants a fundamentals-level Azure AI solution that can identify whether customer feedback is positive, negative, or neutral. Which approach should be selected?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "b",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      },
+      {
+        "id": "c",
+        "text": "Use sentiment analysis to estimate emotional tone or opinion polarity."
+      },
+      {
+        "id": "d",
+        "text": "Assume all AI services require training a model from scratch."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Sentiment analysis is a natural language processing workload.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q357",
+    "category": "nlp",
+    "difficulty": "easy",
+    "subtopic": "key phrase extraction",
+    "type": "single",
+    "prompt": "During an AI-900 / AI-901 review, a logistics company identifies a need to extract important phrases from customer reviews. What is the best answer? Assume the goal is a fundamentals-level Microsoft Azure AI answer.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use the model output as final truth without validation or human review."
+      },
+      {
+        "id": "b",
+        "text": "Use key phrase extraction to identify important words and phrases in text."
+      },
+      {
+        "id": "c",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "d",
+        "text": "Store credentials directly in client-side application code."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Key phrase extraction identifies important concepts in text. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q358",
+    "category": "generative-ai",
+    "difficulty": "hard",
+    "subtopic": "model capabilities matching",
+    "type": "single",
+    "prompt": "A marketing analytics group is reviewing model capabilities. Match each item to the most appropriate description: Text generation, Image generation, Multimodal reasoning, Speech recognition, Information extraction.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Text generation → Creates written responses; Image generation → Creates visual output; Multimodal reasoning → Uses more than one input modality; Speech recognition → Converts audio to text; Information extraction → Turns unstructured content into structured data."
+      },
+      {
+        "id": "b",
+        "text": "Text generation → Creates visual output; Image generation → Creates written responses; Multimodal reasoning → Converts audio to text; Speech recognition → Uses more than one input modality; Information extraction → Turns unstructured content into structured data."
+      },
+      {
+        "id": "c",
+        "text": "Text generation → Turns unstructured content into structured data; Image generation → Uses more than one input modality; Multimodal reasoning → Creates written responses; Speech recognition → Creates visual output; Information extraction → Converts audio to text."
+      },
+      {
+        "id": "d",
+        "text": "Text generation → Converts audio to text; Image generation → Turns unstructured content into structured data; Multimodal reasoning → Creates visual output; Speech recognition → Creates written responses; Information extraction → Uses more than one input modality."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Correct matches: Text generation → Creates written responses; Image generation → Creates visual output; Multimodal reasoning → Uses more than one input modality; Speech recognition → Converts audio to text; Information extraction → Turns unstructured content into structured data. These matches connect each concept or service to its primary purpose.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q359",
+    "category": "nlp",
+    "difficulty": "medium",
+    "subtopic": "speech-to-text",
+    "type": "multi",
+    "prompt": "A healthcare organization is reviewing an AI-900 / AI-901 topic to convert a spoken customer request into text. Which TWO choices are correct?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Increase creativity settings."
+      },
+      {
+        "id": "b",
+        "text": "Use speech recognition or speech-to-text."
+      },
+      {
+        "id": "c",
+        "text": "Ground answers in approved sources, ask the model to cite supporting information, and return uncertainty when evidence is insufficient."
+      },
+      {
+        "id": "d",
+        "text": "Use clustering."
+      },
+      {
+        "id": "e",
+        "text": "Tell the model to always answer."
+      }
+    ],
+    "correct": [
+      "b",
+      "c"
+    ],
+    "explanation": "Speech recognition converts audio speech into text. Also, factual assistants need grounding, validation, and fallback behavior. Both correct choices support the requirement; the distractors overcomplicate the solution, use the wrong modality, or bypass responsible AI practices.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q360",
+    "category": "nlp",
+    "difficulty": "easy",
+    "subtopic": "text-to-speech",
+    "type": "single",
+    "prompt": "A retail company needs to generate spoken audio from written text. Which option is the BEST fit? Assume the goal is a fundamentals-level Microsoft Azure AI answer.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "b",
+        "text": "Use speech synthesis or text-to-speech."
+      },
+      {
+        "id": "c",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "d",
+        "text": "Store credentials directly in client-side application code."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Speech synthesis produces audio from text.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q361",
+    "category": "nlp",
+    "difficulty": "easy",
+    "subtopic": "machine translation",
+    "type": "single",
+    "prompt": "A public-sector agency is preparing for Azure AI Fundamentals. The key requirement is to convert text from one natural language to another. What should be recommended?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use machine translation."
+      },
+      {
+        "id": "b",
+        "text": "Choose the most complex model without evaluating the task requirements."
+      },
+      {
+        "id": "c",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "d",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Translation is an NLP workload that converts text across languages. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q362",
+    "category": "generative-ai",
+    "difficulty": "easy",
+    "subtopic": "transformers",
+    "type": "single",
+    "prompt": "A candidate must understand how to recognize why transformer-based models are important for modern generative AI. Which statement is most accurate? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Send all private customer data to the model regardless of user permissions."
+      },
+      {
+        "id": "b",
+        "text": "Transformers are only physical networking devices."
+      },
+      {
+        "id": "c",
+        "text": "Transformers use attention mechanisms that help models process context and relationships in sequences."
+      },
+      {
+        "id": "d",
+        "text": "Transformers eliminate the need for prompts and evaluation."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Transformer architectures underpin many modern language and generative models. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q363",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "agentic AI",
+    "type": "single",
+    "prompt": "A school administration team wants a fundamentals-level Azure AI solution that can identify a scenario that fits an agentic AI workload. Which approach should be selected?",
+    "options": [
+      {
+        "id": "a",
+        "text": "An AI system plans steps, uses tools, and interacts with services to complete a task under defined constraints."
+      },
+      {
+        "id": "b",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "c",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      },
+      {
+        "id": "d",
+        "text": "Disable safety controls to reduce latency."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Agentic AI involves goal-directed behavior, tool use, and workflow execution.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q364",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "information extraction",
+    "type": "single",
+    "prompt": "During an AI-900 / AI-901 review, a software team building an AI assistant identifies a need to identify a workload that extracts fields from contracts, images, audio, and video. What is the best answer?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use information extraction capabilities such as Azure Content Understanding when the task is to extract structured information from multimodal content."
+      },
+      {
+        "id": "b",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      },
+      {
+        "id": "c",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "d",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Information extraction turns unstructured content into structured data. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-901"
+  },
+  {
+    "id": "q365",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "model selection",
+    "type": "single",
+    "prompt": "Which choice best satisfies the requirement to choose a model for a task that requires interpreting both text and images for a document processing team? Assume the goal is a fundamentals-level Microsoft Azure AI answer.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "b",
+        "text": "Use only a translation service."
+      },
+      {
+        "id": "c",
+        "text": "Choose the most complex model without evaluating the task requirements."
+      },
+      {
+        "id": "d",
+        "text": "Select a multimodal model that supports the required input and output modalities."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "Model selection should consider modality, task fit, latency, cost, and safety needs. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-901"
+  },
+  {
+    "id": "q366",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "grounding",
+    "type": "single",
+    "prompt": "A data science learning team needs to reduce hallucinations in a factual assistant. Which option is the BEST fit?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "b",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "c",
+        "text": "Assume all AI services require training a model from scratch."
+      },
+      {
+        "id": "d",
+        "text": "Ground answers in approved sources, ask the model to cite supporting information, and return uncertainty when evidence is insufficient."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "Factual assistants need grounding, validation, and fallback behavior.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q367",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "image generation",
+    "type": "single",
+    "prompt": "An enterprise knowledge-management group is preparing for Azure AI Fundamentals. The key requirement is to choose the right AI workload for generating product images from prompts. What should be recommended? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Store credentials directly in client-side application code."
+      },
+      {
+        "id": "b",
+        "text": "Use image generation with a model that supports visual output."
+      },
+      {
+        "id": "c",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "d",
+        "text": "Use the model output as final truth without validation or human review."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Image-generation models create new visual content from prompts or other inputs. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q368",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "responsible AI - fairness",
+    "type": "single",
+    "prompt": "A support operations team wants a fundamentals-level Azure AI solution that can identify a responsible AI concern when a loan-screening system performs worse for one demographic group. Which approach should be selected?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "b",
+        "text": "Hide fairness metrics from reviewers to avoid confusion."
+      },
+      {
+        "id": "c",
+        "text": "Ignore subgroup results if overall accuracy is high."
+      },
+      {
+        "id": "d",
+        "text": "Evaluate the model and data for fairness across relevant groups and mitigate disparities before using the system for decisions."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "Fairness considers whether an AI system treats groups equitably and avoids unjustified disparities.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q369",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "responsible AI - reliability & safety",
+    "type": "single",
+    "prompt": "During an AI-900 / AI-901 review, a financial services company identifies a need to select a design principle for an AI system used in a safety-sensitive workflow. What is the best answer? Assume the goal is a fundamentals-level Microsoft Azure AI answer.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Choose the most complex model without evaluating the task requirements."
+      },
+      {
+        "id": "b",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "c",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "d",
+        "text": "Test the solution under expected and edge-case conditions, define fallback behavior, and require human review for high-impact decisions."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "Reliability and safety require testing, monitoring, and controlled behavior when the system is uncertain. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q370",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "responsible AI - privacy & security",
+    "type": "single",
+    "prompt": "Which choice best satisfies the requirement to protect sensitive information used by an AI application for a manufacturing team?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "b",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "c",
+        "text": "Send all private customer data to the model regardless of user permissions."
+      },
+      {
+        "id": "d",
+        "text": "Minimize sensitive data, enforce access control, encrypt data where appropriate, and avoid logging unnecessary personal information."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "Privacy and security require controlling data collection, access, retention, and exposure. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q371",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "responsible AI - transparency",
+    "type": "single",
+    "prompt": "A media company needs to help users understand why an AI assistant produced a recommendation. Which option is the BEST fit? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Provide appropriate explanations, source references, limitations, and user guidance without exposing confidential internals."
+      },
+      {
+        "id": "b",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "c",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "d",
+        "text": "Use the model output as final truth without validation or human review."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Transparency helps users understand AI behavior and limitations.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q372",
+    "category": "ai-workloads",
+    "difficulty": "hard",
+    "subtopic": "workload selection ordering",
+    "type": "single",
+    "prompt": "A data science learning team must choose an AI workload for a business scenario. Put the following steps in the MOST appropriate order: Review responsible AI risks; Identify the business outcome; Select an Azure capability to evaluate; Map the scenario to an AI workload; Determine the input and output data types.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Identify the business outcome → Determine the input and output data types → Map the scenario to an AI workload → Review responsible AI risks → Select an Azure capability to evaluate."
+      },
+      {
+        "id": "b",
+        "text": "Select an Azure capability to evaluate → Identify the business outcome → Determine the input and output data types → Map the scenario to an AI workload → Review responsible AI risks."
+      },
+      {
+        "id": "c",
+        "text": "Determine the input and output data types → Identify the business outcome → Review responsible AI risks → Map the scenario to an AI workload → Select an Azure capability to evaluate."
+      },
+      {
+        "id": "d",
+        "text": "Map the scenario to an AI workload → Identify the business outcome → Select an Azure capability to evaluate → Determine the input and output data types → Review responsible AI risks."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The correct order is: Identify the business outcome → Determine the input and output data types → Map the scenario to an AI workload → Review responsible AI risks → Select an Azure capability to evaluate. This sequence moves from requirement analysis to selection, testing, and responsible implementation.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q373",
+    "category": "computer-vision",
+    "difficulty": "easy",
+    "subtopic": "OCR",
+    "type": "single",
+    "prompt": "An enterprise knowledge-management group is preparing for Azure AI Fundamentals. The key requirement is to classify a scenario where a system extracts text from scanned invoices. What should be recommended?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Store credentials directly in client-side application code."
+      },
+      {
+        "id": "b",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      },
+      {
+        "id": "c",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "d",
+        "text": "Identify the workload as optical character recognition or document processing."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "OCR and document processing extract text and structured information from images or documents. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900"
+  },
+  {
+    "id": "q374",
+    "category": "generative-ai",
+    "difficulty": "hard",
+    "subtopic": "model selection ordering",
+    "type": "single",
+    "prompt": "A business analyst must select a generative AI model conceptually. Put the following steps in the MOST appropriate order: Define task and required modality; Consider safety and privacy requirements; Test representative prompts; Review model capability and limitations; Choose deployment and monitoring approach.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Define task and required modality → Review model capability and limitations → Consider safety and privacy requirements → Test representative prompts → Choose deployment and monitoring approach."
+      },
+      {
+        "id": "b",
+        "text": "Review model capability and limitations → Define task and required modality → Test representative prompts → Consider safety and privacy requirements → Choose deployment and monitoring approach."
+      },
+      {
+        "id": "c",
+        "text": "Choose deployment and monitoring approach → Define task and required modality → Review model capability and limitations → Consider safety and privacy requirements → Test representative prompts."
+      },
+      {
+        "id": "d",
+        "text": "Define task and required modality → Test representative prompts → Review model capability and limitations → Choose deployment and monitoring approach → Consider safety and privacy requirements."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The correct order is: Define task and required modality → Review model capability and limitations → Consider safety and privacy requirements → Test representative prompts → Choose deployment and monitoring approach. This sequence moves from requirement analysis to selection, testing, and responsible implementation.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q375",
+    "category": "machine-learning",
+    "difficulty": "hard",
+    "subtopic": "ML concepts matching",
+    "type": "single",
+    "prompt": "A healthcare organization is reviewing AI concepts and workloads. Match each item to the most appropriate description: Regression, Classification, Clustering, OCR, Sentiment analysis.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Regression → Predicts continuous numeric values; Classification → Predicts categories or labels; Clustering → Finds groups in unlabeled data; OCR → Extracts text from images or documents; Sentiment analysis → Identifies positive, negative, or neutral tone."
+      },
+      {
+        "id": "b",
+        "text": "Regression → Predicts categories or labels; Classification → Predicts continuous numeric values; Clustering → Extracts text from images or documents; OCR → Finds groups in unlabeled data; Sentiment analysis → Identifies positive, negative, or neutral tone."
+      },
+      {
+        "id": "c",
+        "text": "Regression → Finds groups in unlabeled data; Classification → Identifies positive, negative, or neutral tone; Clustering → Predicts continuous numeric values; OCR → Predicts categories or labels; Sentiment analysis → Extracts text from images or documents."
+      },
+      {
+        "id": "d",
+        "text": "Regression → Extracts text from images or documents; Classification → Finds groups in unlabeled data; Clustering → Predicts categories or labels; OCR → Identifies positive, negative, or neutral tone; Sentiment analysis → Predicts continuous numeric values."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Correct matches: Regression → Predicts continuous numeric values; Classification → Predicts categories or labels; Clustering → Finds groups in unlabeled data; OCR → Extracts text from images or documents; Sentiment analysis → Identifies positive, negative, or neutral tone. These matches connect each concept or service to its primary purpose.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q376",
+    "category": "machine-learning",
+    "difficulty": "easy",
+    "subtopic": "clustering",
+    "type": "single",
+    "prompt": "During an AI-900 / AI-901 review, a retail company identifies a need to group customers into segments without pre-existing labels. What is the best answer?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use classification because there are no labels."
+      },
+      {
+        "id": "b",
+        "text": "Choose the most complex model without evaluating the task requirements."
+      },
+      {
+        "id": "c",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "d",
+        "text": "Use clustering because it discovers groups from unlabeled data."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "Clustering is an unsupervised learning technique for finding groups. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900"
+  },
+  {
+    "id": "q377",
+    "category": "machine-learning",
+    "difficulty": "medium",
+    "subtopic": "validation data",
+    "type": "single",
+    "prompt": "Which choice best satisfies the requirement to explain why validation data is used during model development for a public-sector agency? Assume the goal is a fundamentals-level Microsoft Azure AI answer.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Validation data is used only to store model code."
+      },
+      {
+        "id": "b",
+        "text": "Validation data must always be identical to training data."
+      },
+      {
+        "id": "c",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "d",
+        "text": "Validation data helps evaluate model performance on examples that were not used to train the model."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "Using separate data helps estimate how well the model generalizes. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900"
+  },
+  {
+    "id": "q378",
+    "category": "machine-learning",
+    "difficulty": "easy",
+    "subtopic": "features and labels",
+    "type": "single",
+    "prompt": "A contact center needs to identify features and labels in a supervised learning dataset. Which option is the BEST fit?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use the model output as final truth without validation or human review."
+      },
+      {
+        "id": "b",
+        "text": "Features are input variables used by the model, and the label is the value the model learns to predict."
+      },
+      {
+        "id": "c",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "d",
+        "text": "Labels are the cloud resources used for training."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Supervised learning maps input features to known labels during training.",
+    "source": "AI-900"
+  },
+  {
+    "id": "q379",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "generative AI concepts",
+    "type": "multi",
+    "prompt": "An Azure AI Fundamentals scenario requires an approach that can identify what a generative AI model is designed to do. Which TWO recommendations best support this goal?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Generate new content such as text, images, audio, code, or structured responses based on learned patterns and prompts."
+      },
+      {
+        "id": "b",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "c",
+        "text": "Assume all AI services require training a model from scratch."
+      },
+      {
+        "id": "d",
+        "text": "Use sentiment analysis to estimate emotional tone or opinion polarity."
+      },
+      {
+        "id": "e",
+        "text": "Store credentials directly in client-side application code."
+      }
+    ],
+    "correct": [
+      "a",
+      "d"
+    ],
+    "explanation": "Generative AI creates new outputs rather than only classifying or forecasting. Also, sentiment analysis is a natural language processing workload. Both correct choices support the requirement; the distractors overcomplicate the solution, use the wrong modality, or bypass responsible AI practices.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q380",
+    "category": "generative-ai",
+    "difficulty": "easy",
+    "subtopic": "model parameters",
+    "type": "single",
+    "prompt": "A candidate must understand how to identify the role of parameters in an AI model. Which statement is most accurate?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "b",
+        "text": "Assume all AI services require training a model from scratch."
+      },
+      {
+        "id": "c",
+        "text": "Parameters are learned internal values that influence how the model transforms inputs into outputs."
+      },
+      {
+        "id": "d",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Model parameters are learned during training and affect model behavior. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-901"
+  },
+  {
+    "id": "q381",
+    "category": "machine-learning",
+    "difficulty": "medium",
+    "subtopic": "model deployment",
+    "type": "single",
+    "prompt": "A document processing team wants a fundamentals-level Azure AI solution that can choose a deployment approach for an AI model that an application will call through an endpoint. Which approach should be selected?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Deploy the model to an approved endpoint and configure authentication, capacity, and monitoring for application use."
+      },
+      {
+        "id": "b",
+        "text": "Keep the model only in a training notebook."
+      },
+      {
+        "id": "c",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "d",
+        "text": "Send all private customer data to the model regardless of user permissions."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Applications usually need a hosted model endpoint or managed service interface.",
+    "source": "AI-901"
+  },
+  {
+    "id": "q382",
+    "category": "generative-ai",
+    "difficulty": "easy",
+    "subtopic": "temperature",
+    "type": "single",
+    "prompt": "During an AI-900 / AI-901 review, a data science learning team identifies a need to understand the effect of temperature in a generative model request. What is the best answer? Assume the goal is a fundamentals-level Microsoft Azure AI answer.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "b",
+        "text": "Temperature is the number of users allowed to sign in."
+      },
+      {
+        "id": "c",
+        "text": "Temperature influences randomness or variety in generated output; lower values are usually more deterministic."
+      },
+      {
+        "id": "d",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Generation parameters can affect style, determinism, and output length but do not replace validation. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-901"
+  },
+  {
+    "id": "q383",
+    "category": "computer-vision",
+    "difficulty": "easy",
+    "subtopic": "object detection",
+    "type": "single",
+    "prompt": "Which choice best satisfies the requirement to identify an appropriate workload for finding objects in images for an enterprise knowledge-management group?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "b",
+        "text": "Store credentials directly in client-side application code."
+      },
+      {
+        "id": "c",
+        "text": "Use object detection to locate and classify objects within images."
+      },
+      {
+        "id": "d",
+        "text": "Choose the most complex model without evaluating the task requirements."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Object detection identifies objects and their locations. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q384",
+    "category": "computer-vision",
+    "difficulty": "easy",
+    "subtopic": "image classification",
+    "type": "single",
+    "prompt": "A business analyst needs to choose the correct computer vision task for assigning one label to an image. Which option is the BEST fit? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "b",
+        "text": "Use image classification to assign the image to a category."
+      },
+      {
+        "id": "c",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "d",
+        "text": "Choose the most complex model without evaluating the task requirements."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Image classification assigns categories to whole images.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q385",
+    "category": "computer-vision",
+    "difficulty": "easy",
+    "subtopic": "OCR",
+    "type": "single",
+    "prompt": "A legal operations team needs to choose the right capability to read printed text from a photographed receipt. Which option is the BEST fit? Assume the goal is a fundamentals-level Microsoft Azure AI answer.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use optical character recognition to extract text from the image."
+      },
+      {
+        "id": "b",
+        "text": "Use the model output as final truth without validation or human review."
+      },
+      {
+        "id": "c",
+        "text": "Use sentiment analysis."
+      },
+      {
+        "id": "d",
+        "text": "Send all private customer data to the model regardless of user permissions."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "OCR extracts text from images or scanned documents.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q386",
+    "category": "nlp",
+    "difficulty": "easy",
+    "subtopic": "sentiment analysis",
+    "type": "single",
+    "prompt": "A logistics company is preparing for Azure AI Fundamentals. The key requirement is to identify whether customer feedback is positive, negative, or neutral. What should be recommended?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "b",
+        "text": "Use sentiment analysis to estimate emotional tone or opinion polarity."
+      },
+      {
+        "id": "c",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "d",
+        "text": "Use object detection."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Sentiment analysis is a natural language processing workload. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q387",
+    "category": "generative-ai",
+    "difficulty": "hard",
+    "subtopic": "model capabilities matching",
+    "type": "single",
+    "prompt": "A marketing analytics group is reviewing model capabilities. Match each item to the most appropriate description: Text generation, Image generation, Multimodal reasoning, Speech recognition, Information extraction.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Text generation → Creates written responses; Image generation → Creates visual output; Multimodal reasoning → Uses more than one input modality; Speech recognition → Converts audio to text; Information extraction → Turns unstructured content into structured data."
+      },
+      {
+        "id": "b",
+        "text": "Text generation → Creates visual output; Image generation → Creates written responses; Multimodal reasoning → Converts audio to text; Speech recognition → Uses more than one input modality; Information extraction → Turns unstructured content into structured data."
+      },
+      {
+        "id": "c",
+        "text": "Text generation → Turns unstructured content into structured data; Image generation → Uses more than one input modality; Multimodal reasoning → Creates written responses; Speech recognition → Creates visual output; Information extraction → Converts audio to text."
+      },
+      {
+        "id": "d",
+        "text": "Text generation → Converts audio to text; Image generation → Turns unstructured content into structured data; Multimodal reasoning → Creates visual output; Speech recognition → Creates written responses; Information extraction → Uses more than one input modality."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Correct matches: Text generation → Creates written responses; Image generation → Creates visual output; Multimodal reasoning → Uses more than one input modality; Speech recognition → Converts audio to text; Information extraction → Turns unstructured content into structured data. These matches connect each concept or service to its primary purpose.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q388",
+    "category": "nlp",
+    "difficulty": "easy",
+    "subtopic": "named entity recognition",
+    "type": "single",
+    "prompt": "A startup building an Azure AI prototype wants a fundamentals-level Azure AI solution that can detect names of people, locations, and organizations in support messages. Which approach should be selected?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "b",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "c",
+        "text": "Use named entity recognition to identify and categorize entities in text."
+      },
+      {
+        "id": "d",
+        "text": "Choose the most complex model without evaluating the task requirements."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Entity recognition identifies and categorizes named elements in text.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q389",
+    "category": "nlp",
+    "difficulty": "easy",
+    "subtopic": "speech-to-text",
+    "type": "single",
+    "prompt": "During an AI-900 / AI-901 review, a customer service department identifies a need to convert a spoken customer request into text. What is the best answer?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Store credentials directly in client-side application code."
+      },
+      {
+        "id": "b",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      },
+      {
+        "id": "c",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "d",
+        "text": "Use speech recognition or speech-to-text."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "Speech recognition converts audio speech into text. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q390",
+    "category": "generative-ai",
+    "difficulty": "hard",
+    "subtopic": "model selection ordering",
+    "type": "single",
+    "prompt": "A junior developer must select a generative AI model conceptually. Put the following steps in the MOST appropriate order: Choose deployment and monitoring approach; Review model capability and limitations; Define task and required modality; Test representative prompts; Consider safety and privacy requirements.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Define task and required modality → Review model capability and limitations → Consider safety and privacy requirements → Test representative prompts → Choose deployment and monitoring approach."
+      },
+      {
+        "id": "b",
+        "text": "Review model capability and limitations → Define task and required modality → Test representative prompts → Consider safety and privacy requirements → Choose deployment and monitoring approach."
+      },
+      {
+        "id": "c",
+        "text": "Choose deployment and monitoring approach → Define task and required modality → Review model capability and limitations → Consider safety and privacy requirements → Test representative prompts."
+      },
+      {
+        "id": "d",
+        "text": "Define task and required modality → Test representative prompts → Review model capability and limitations → Choose deployment and monitoring approach → Consider safety and privacy requirements."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The correct order is: Define task and required modality → Review model capability and limitations → Consider safety and privacy requirements → Test representative prompts → Choose deployment and monitoring approach. This sequence moves from requirement analysis to selection, testing, and responsible implementation.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q391",
+    "category": "nlp",
+    "difficulty": "easy",
+    "subtopic": "machine translation",
+    "type": "single",
+    "prompt": "A support operations team needs to convert text from one natural language to another. Which option is the BEST fit?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use object detection."
+      },
+      {
+        "id": "b",
+        "text": "Use machine translation."
+      },
+      {
+        "id": "c",
+        "text": "Send all private customer data to the model regardless of user permissions."
+      },
+      {
+        "id": "d",
+        "text": "Disable safety controls to reduce latency."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Translation is an NLP workload that converts text across languages.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q392",
+    "category": "ai-workloads",
+    "difficulty": "hard",
+    "subtopic": "responsible AI matching",
+    "type": "single",
+    "prompt": "A financial services company is reviewing responsible AI principles. Match each item to the most appropriate description: Fairness, Reliability and safety, Privacy and security, Transparency, Accountability.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Fairness → Treats groups equitably; Reliability and safety → Performs consistently and fails safely; Privacy and security → Protects data and access; Transparency → Explains capabilities and limitations; Accountability → Assigns human ownership and oversight."
+      },
+      {
+        "id": "b",
+        "text": "Fairness → Explains capabilities and limitations; Reliability and safety → Protects data and access; Privacy and security → Assigns human ownership and oversight; Transparency → Performs consistently and fails safely; Accountability → Treats groups equitably."
+      },
+      {
+        "id": "c",
+        "text": "Fairness → Protects data and access; Reliability and safety → Treats groups equitably; Privacy and security → Explains capabilities and limitations; Transparency → Assigns human ownership and oversight; Accountability → Performs consistently and fails safely."
+      },
+      {
+        "id": "d",
+        "text": "Fairness → Performs consistently and fails safely; Reliability and safety → Assigns human ownership and oversight; Privacy and security → Treats groups equitably; Transparency → Protects data and access; Accountability → Explains capabilities and limitations."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Correct matches: Fairness → Treats groups equitably; Reliability and safety → Performs consistently and fails safely; Privacy and security → Protects data and access; Transparency → Explains capabilities and limitations; Accountability → Assigns human ownership and oversight. These matches connect each concept or service to its primary purpose.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q393",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "agentic AI",
+    "type": "multi",
+    "prompt": "A manufacturing team is reviewing an AI-900 / AI-901 topic to identify a scenario that fits an agentic AI workload. Which TWO choices are correct?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A DNS record routes users to a web app."
+      },
+      {
+        "id": "b",
+        "text": "Minimize sensitive data, enforce access control, encrypt data where appropriate, and avoid logging unnecessary personal information."
+      },
+      {
+        "id": "c",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "d",
+        "text": "An AI system plans steps, uses tools, and interacts with services to complete a task under defined constraints."
+      },
+      {
+        "id": "e",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      }
+    ],
+    "correct": [
+      "b",
+      "d"
+    ],
+    "explanation": "Agentic AI involves goal-directed behavior, tool use, and workflow execution. Also, privacy and security require controlling data collection, access, retention, and exposure. Both correct choices support the requirement; the distractors overcomplicate the solution, use the wrong modality, or bypass responsible AI practices.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q394",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "information extraction",
+    "type": "multi",
+    "prompt": "A media company must design or identify a solution to identify a workload that extracts fields from contracts, images, audio, and video. Which TWO actions or concepts are most appropriate?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "b",
+        "text": "Hide all limitations so users trust the system."
+      },
+      {
+        "id": "c",
+        "text": "Provide appropriate explanations, source references, limitations, and user guidance without exposing confidential internals."
+      },
+      {
+        "id": "d",
+        "text": "Use information extraction capabilities such as Azure Content Understanding when the task is to extract structured information from multimodal content."
+      },
+      {
+        "id": "e",
+        "text": "Disable safety controls to reduce latency."
+      }
+    ],
+    "correct": [
+      "c",
+      "d"
+    ],
+    "explanation": "Information extraction turns unstructured content into structured data. Also, transparency helps users understand AI behavior and limitations. Both correct choices support the requirement; the distractors overcomplicate the solution, use the wrong modality, or bypass responsible AI practices.",
+    "source": "AI-901"
+  },
+  {
+    "id": "q395",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "model selection",
+    "type": "single",
+    "prompt": "During an AI-900 / AI-901 review, a legal operations team identifies a need to choose a model for a task that requires interpreting both text and images. What is the best answer? Assume the goal is a fundamentals-level Microsoft Azure AI answer.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Select a multimodal model that supports the required input and output modalities."
+      },
+      {
+        "id": "b",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "c",
+        "text": "Select a text-only model and paste image filenames into the prompt."
+      },
+      {
+        "id": "d",
+        "text": "Use only a translation service."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Model selection should consider modality, task fit, latency, cost, and safety needs. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-901"
+  },
+  {
+    "id": "q396",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "grounding",
+    "type": "single",
+    "prompt": "Which choice best satisfies the requirement to reduce hallucinations in a factual assistant for a logistics company?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use the model output as final truth without validation or human review."
+      },
+      {
+        "id": "b",
+        "text": "Remove source references to improve confidence."
+      },
+      {
+        "id": "c",
+        "text": "Ground answers in approved sources, ask the model to cite supporting information, and return uncertainty when evidence is insufficient."
+      },
+      {
+        "id": "d",
+        "text": "Store credentials directly in client-side application code."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Factual assistants need grounding, validation, and fallback behavior. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q397",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "image generation",
+    "type": "single",
+    "prompt": "A marketing analytics group needs to choose the right AI workload for generating product images from prompts. Which option is the BEST fit? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use OCR."
+      },
+      {
+        "id": "b",
+        "text": "Use image generation with a model that supports visual output."
+      },
+      {
+        "id": "c",
+        "text": "Use the model output as final truth without validation or human review."
+      },
+      {
+        "id": "d",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Image-generation models create new visual content from prompts or other inputs.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q398",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "responsible AI - fairness",
+    "type": "multi",
+    "prompt": "An Azure AI Fundamentals scenario requires an approach that can identify a responsible AI concern when a loan-screening system performs worse for one demographic group. Which TWO recommendations best support this goal?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use binary classification because the model chooses between two categories."
+      },
+      {
+        "id": "b",
+        "text": "Evaluate the model and data for fairness across relevant groups and mitigate disparities before using the system for decisions."
+      },
+      {
+        "id": "c",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      },
+      {
+        "id": "d",
+        "text": "Ignore subgroup results if overall accuracy is high."
+      },
+      {
+        "id": "e",
+        "text": "Use a larger model to remove bias automatically."
+      }
+    ],
+    "correct": [
+      "a",
+      "b"
+    ],
+    "explanation": "Fairness considers whether an AI system treats groups equitably and avoids unjustified disparities. Also, classification predicts categories or labels. Both correct choices support the requirement; the distractors overcomplicate the solution, use the wrong modality, or bypass responsible AI practices.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q399",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "responsible AI - reliability & safety",
+    "type": "multi",
+    "prompt": "A manufacturing team is reviewing an AI-900 / AI-901 topic to select a design principle for an AI system used in a safety-sensitive workflow. Which TWO choices are correct?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Allow the model to make final decisions with no monitoring."
+      },
+      {
+        "id": "b",
+        "text": "Test the solution under expected and edge-case conditions, define fallback behavior, and require human review for high-impact decisions."
+      },
+      {
+        "id": "c",
+        "text": "Send all private customer data to the model regardless of user permissions."
+      },
+      {
+        "id": "d",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      },
+      {
+        "id": "e",
+        "text": "Use clustering because it discovers groups from unlabeled data."
+      }
+    ],
+    "correct": [
+      "b",
+      "e"
+    ],
+    "explanation": "Reliability and safety require testing, monitoring, and controlled behavior when the system is uncertain. Also, clustering is an unsupervised learning technique for finding groups. Both correct choices support the requirement; the distractors overcomplicate the solution, use the wrong modality, or bypass responsible AI practices.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q400",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "responsible AI - privacy & security",
+    "type": "single",
+    "prompt": "A media company wants a fundamentals-level Azure AI solution that can protect sensitive information used by an AI application. Which approach should be selected?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Minimize sensitive data, enforce access control, encrypt data where appropriate, and avoid logging unnecessary personal information."
+      },
+      {
+        "id": "b",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "c",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      },
+      {
+        "id": "d",
+        "text": "Assume all AI services require training a model from scratch."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Privacy and security require controlling data collection, access, retention, and exposure.",
+    "source": "AI-900 / AI-901"
+  },
+  {
+    "id": "q401",
+    "category": "ai-workloads",
+    "difficulty": "hard",
+    "subtopic": "responsible AI matching",
+    "type": "single",
+    "prompt": "A legal operations team is reviewing responsible AI principles. Match each item to the most appropriate description: Fairness, Reliability and safety, Privacy and security, Transparency, Accountability.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Fairness → Treats groups equitably; Reliability and safety → Performs consistently and fails safely; Privacy and security → Protects data and access; Transparency → Explains capabilities and limitations; Accountability → Assigns human ownership and oversight."
+      },
+      {
+        "id": "b",
+        "text": "Fairness → Explains capabilities and limitations; Reliability and safety → Protects data and access; Privacy and security → Assigns human ownership and oversight; Transparency → Performs consistently and fails safely; Accountability → Treats groups equitably."
+      },
+      {
+        "id": "c",
+        "text": "Fairness → Protects data and access; Reliability and safety → Treats groups equitably; Privacy and security → Explains capabilities and limitations; Transparency → Assigns human ownership and oversight; Accountability → Performs consistently and fails safely."
+      },
+      {
+        "id": "d",
+        "text": "Fairness → Performs consistently and fails safely; Reliability and safety → Assigns human ownership and oversight; Privacy and security → Treats groups equitably; Transparency → Protects data and access; Accountability → Explains capabilities and limitations."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Correct matches: Fairness → Treats groups equitably; Reliability and safety → Performs consistently and fails safely; Privacy and security → Protects data and access; Transparency → Explains capabilities and limitations; Accountability → Assigns human ownership and oversight. These matches connect each concept or service to its primary purpose.",
+    "source": "AI-900 / AI-901"
   }
 ]
