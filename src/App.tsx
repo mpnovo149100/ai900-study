@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import rawQuestions from "./data/questions.json";
 import type { Question } from "./types";
-import type { CategoryKey } from "./categories";
+import type { CategoryKey, Difficulty } from "./categories";
 import { Home } from "./components/Home";
 import { Study } from "./components/Study";
 import { Report } from "./components/Report";
@@ -15,6 +15,8 @@ export type Filter =
   | { kind: "category"; category: CategoryKey }
   | { kind: "review" }; // only the ones you got wrong last time
 
+export type DifficultyFilter = Difficulty | "all";
+
 type View =
   | { name: "home" }
   | { name: "study"; queue: Question[] }
@@ -22,14 +24,21 @@ type View =
 
 export default function App() {
   const [progress, setProgress] = useState<Progress>(() => loadProgress());
+  const [difficulty, setDifficulty] = useState<DifficultyFilter>("all");
   const [view, setView] = useState<View>({ name: "home" });
 
+  // pool = questions matching the active difficulty sub-filter
+  const pool = useMemo(
+    () => (difficulty === "all" ? ALL : ALL.filter((q) => q.difficulty === difficulty)),
+    [difficulty]
+  );
+
   const start = (filter: Filter) => {
-    let queue = ALL;
+    let queue = pool;
     if (filter.kind === "category") {
-      queue = ALL.filter((q) => q.category === filter.category);
+      queue = pool.filter((q) => q.category === filter.category);
     } else if (filter.kind === "review") {
-      queue = ALL.filter((q) => progress[q.id] && !progress[q.id].lastCorrect);
+      queue = pool.filter((q) => progress[q.id] && !progress[q.id].lastCorrect);
     }
     queue = shuffle(queue);
     if (queue.length === 0) return;
@@ -45,24 +54,32 @@ export default function App() {
 
   const counts = useMemo(() => {
     const byCat: Record<string, number> = {};
-    for (const q of ALL) byCat[q.category] = (byCat[q.category] ?? 0) + 1;
-    return { total: ALL.length, byCat };
+    for (const q of pool) byCat[q.category] = (byCat[q.category] ?? 0) + 1;
+    return { total: pool.length, byCat };
+  }, [pool]);
+
+  const diffCounts = useMemo(() => {
+    const byDiff: Record<string, number> = { all: ALL.length };
+    for (const q of ALL) byDiff[q.difficulty] = (byDiff[q.difficulty] ?? 0) + 1;
+    return byDiff;
   }, []);
 
   return (
     <div className="app">
       <header className="topbar">
         <h1>🧠 AI-900 · Study</h1>
-        <span className="muted">{counts.total} questions in the DB</span>
+        <span className="muted">{ALL.length} questions in the DB</span>
       </header>
 
       {view.name === "home" && (
         <Home
-          all={ALL}
+          all={pool}
           progress={progress}
           countsByCat={counts.byCat}
+          difficulty={difficulty}
+          diffCounts={diffCounts}
+          onDifficulty={setDifficulty}
           onStart={start}
-          onReset={() => setProgress(loadProgress())}
           setProgress={setProgress}
         />
       )}

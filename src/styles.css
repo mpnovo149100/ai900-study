@@ -65,6 +65,14 @@ button.ghost { background: transparent; }
 .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
 .btn-row.end { justify-content: flex-end; margin-top: 16px; }
 
+.diff-filter { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip {
+  background: transparent; border: 1px solid var(--border); border-radius: 99px;
+  padding: 6px 14px; font-size: 0.875rem; font-weight: 600;
+}
+.chip.active { color: #fff; }
+.filter-note { margin: 12px 0 0; }
+
 .cat-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 .cat-btn { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 10px; text-align: left; }
 .cat-name { font-weight: 500; display: inline-flex; align-items: center; gap: 8px; }
