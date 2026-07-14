@@ -901,5 +901,244 @@
     "correct": ["d"],
     "explanation": "Object detection identifies objects and their locations, so it is the right workload for finding objects in images. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
     "source": "AI-900 · Computer Vision"
+  },
+  {
+    "id": "q054",
+    "category": "computer-vision",
+    "difficulty": "easy",
+    "subtopic": "Image classification",
+    "type": "single",
+    "prompt": "A candidate must understand how to choose the correct computer vision task for assigning one label to an image. Which statement is most accurate?",
+    "options": [
+      { "id": "a", "text": "Choose the most complex model without evaluating the task requirements." },
+      { "id": "b", "text": "Use OCR to generate synthetic images." },
+      { "id": "c", "text": "Use image classification to assign the image to a category." },
+      { "id": "d", "text": "Use only one friendly prompt as proof that the solution is ready." }
+    ],
+    "correct": ["c"],
+    "explanation": "Image classification assigns categories to whole images, so it is the right task for assigning one label to an image. For AI-900, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 · Computer Vision"
+  },
+  {
+    "id": "q055",
+    "category": "computer-vision",
+    "difficulty": "easy",
+    "subtopic": "OCR",
+    "type": "single",
+    "prompt": "A data science learning team wants a fundamentals-level Azure AI solution that can choose the right capability to read printed text from a photographed receipt. Which approach should be selected? The answer should avoid unnecessary custom model training.",
+    "options": [
+      { "id": "a", "text": "Use optical character recognition to extract text from the image." },
+      { "id": "b", "text": "Use the model output as final truth without validation or human review." },
+      { "id": "c", "text": "Use clustering." },
+      { "id": "d", "text": "Rely on memorized responses instead of grounding or validated sources." }
+    ],
+    "correct": ["a"],
+    "explanation": "OCR extracts text from images or scanned documents, so it is the right capability to read printed text from a photographed receipt, without needing custom model training. The distractors confuse workload type or use the wrong task.",
+    "source": "AI-900 · Computer Vision"
+  },
+  {
+    "id": "q056",
+    "category": "nlp",
+    "difficulty": "medium",
+    "subtopic": "Sentiment analysis (concept check)",
+    "type": "multi",
+    "prompt": "An Azure AI Fundamentals scenario requires an approach that can identify whether customer feedback is positive, negative, or neutral. Which TWO recommendations best support this goal?",
+    "options": [
+      { "id": "a", "text": "An AI system plans steps, uses tools, and interacts with services to complete a task under defined constraints." },
+      { "id": "b", "text": "Use sentiment analysis to estimate emotional tone or opinion polarity." },
+      { "id": "c", "text": "Choose the most complex model without evaluating the task requirements." },
+      { "id": "d", "text": "Increase creativity settings to guarantee factual accuracy." },
+      { "id": "e", "text": "Use the model output as final truth without validation or human review." }
+    ],
+    "correct": ["a", "b"],
+    "explanation": "Sentiment analysis is a natural language processing workload that estimates emotional tone or opinion polarity. Also, agentic AI involves goal-directed behavior, tool use, and workflow execution. Both correct choices support the requirement; the distractors overcomplicate the solution, use the wrong modality, or bypass responsible AI practices.",
+    "source": "AI-900 · Natural Language Processing"
+  },
+  {
+    "id": "q057",
+    "category": "nlp",
+    "difficulty": "easy",
+    "subtopic": "Key phrase extraction",
+    "type": "single",
+    "prompt": "Which choice best satisfies the requirement to extract important phrases from customer reviews for a business analyst?",
+    "options": [
+      { "id": "a", "text": "Send all private customer data to the model regardless of user permissions." },
+      { "id": "b", "text": "Use key phrase extraction to identify important words and phrases in text." },
+      { "id": "c", "text": "Rely on memorized responses instead of grounding or validated sources." },
+      { "id": "d", "text": "Choose the most complex model without evaluating the task requirements." }
+    ],
+    "correct": ["b"],
+    "explanation": "Key phrase extraction identifies important concepts in text, so it is the right capability for extracting important phrases from customer reviews. For AI-900, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 · Natural Language Processing"
+  },
+  {
+    "id": "q058",
+    "category": "nlp",
+    "difficulty": "easy",
+    "subtopic": "Named entity recognition (NER)",
+    "type": "single",
+    "prompt": "A healthcare organization needs to detect names of people, locations, and organizations in support messages. Which option is the BEST fit? Assume the goal is a fundamentals-level Microsoft Azure AI answer.",
+    "options": [
+      { "id": "a", "text": "Use named entity recognition to identify and categorize entities in text." },
+      { "id": "b", "text": "Send all private customer data to the model regardless of user permissions." },
+      { "id": "c", "text": "Use public storage for prompts, logs, and keys to simplify development." },
+      { "id": "d", "text": "Use object detection." }
+    ],
+    "correct": ["a"],
+    "explanation": "Named entity recognition (NER) identifies and categorizes named elements in text (people, locations, organizations), so it is the right fit. The distractors use insecure patterns or the wrong task (object detection is for images).",
+    "source": "AI-900 · Natural Language Processing"
+  },
+  {
+    "id": "q059",
+    "category": "nlp",
+    "difficulty": "easy",
+    "subtopic": "Speech-to-text",
+    "type": "single",
+    "prompt": "A retail company is preparing for Azure AI Fundamentals. The key requirement is to convert a spoken customer request into text. What should be recommended?",
+    "options": [
+      { "id": "a", "text": "Use only one friendly prompt as proof that the solution is ready." },
+      { "id": "b", "text": "Use the model output as final truth without validation or human review." },
+      { "id": "c", "text": "Store credentials directly in client-side application code." },
+      { "id": "d", "text": "Use speech recognition or speech-to-text." }
+    ],
+    "correct": ["d"],
+    "explanation": "Speech recognition (speech-to-text) converts audio speech into text, so it is the right capability. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 · Natural Language Processing"
+  },
+  {
+    "id": "q060",
+    "category": "nlp",
+    "difficulty": "easy",
+    "subtopic": "Text-to-speech (speech synthesis)",
+    "type": "single",
+    "prompt": "A marketing analytics group is preparing for Azure AI Fundamentals. The key requirement is to generate spoken audio from written text. What should be recommended?",
+    "options": [
+      { "id": "a", "text": "Use OCR." },
+      { "id": "b", "text": "Use public storage for prompts, logs, and keys to simplify development." },
+      { "id": "c", "text": "Use speech synthesis or text-to-speech." },
+      { "id": "d", "text": "Disable safety controls to reduce latency." }
+    ],
+    "correct": ["c"],
+    "explanation": "Speech synthesis (text-to-speech) produces spoken audio from written text. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 · Natural Language Processing"
+  },
+  {
+    "id": "q061",
+    "category": "nlp",
+    "difficulty": "easy",
+    "subtopic": "Machine translation",
+    "type": "single",
+    "prompt": "A candidate must understand how to convert text from one natural language to another. Which statement is most accurate? Assume the goal is a fundamentals-level Microsoft Azure AI answer.",
+    "options": [
+      { "id": "a", "text": "Choose the most complex model without evaluating the task requirements." },
+      { "id": "b", "text": "Use object detection." },
+      { "id": "c", "text": "Rely on memorized responses instead of grounding or validated sources." },
+      { "id": "d", "text": "Use machine translation." }
+    ],
+    "correct": ["d"],
+    "explanation": "Translation is an NLP workload that converts text across languages, so machine translation is the correct capability. For AI-900, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 · Natural Language Processing"
+  },
+  {
+    "id": "q062",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "Transformers / attention",
+    "type": "single",
+    "prompt": "A customer service department wants a fundamentals-level Azure AI solution that can recognize why transformer-based models are important for modern generative AI. Which approach should be selected?",
+    "options": [
+      { "id": "a", "text": "Transformers use attention mechanisms that help models process context and relationships in sequences." },
+      { "id": "b", "text": "Store credentials directly in client-side application code." },
+      { "id": "c", "text": "Transformers are used only for image compression." },
+      { "id": "d", "text": "Disable safety controls to reduce latency." }
+    ],
+    "correct": ["a"],
+    "explanation": "Transformer architectures underpin many modern language and generative models: they use attention mechanisms that help models process context and relationships in sequences. The distractors are insecure or factually wrong.",
+    "source": "AI-900 · Generative AI"
+  },
+  {
+    "id": "q063",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "Agentic AI",
+    "type": "single",
+    "prompt": "During an AI-900 review, a junior developer identifies a need to identify a scenario that fits an agentic AI workload. What is the best answer? The answer should avoid unnecessary custom model training.",
+    "options": [
+      { "id": "a", "text": "Use public storage for prompts, logs, and keys to simplify development." },
+      { "id": "b", "text": "Choose the most complex model without evaluating the task requirements." },
+      { "id": "c", "text": "Increase creativity settings to guarantee factual accuracy." },
+      { "id": "d", "text": "An AI system plans steps, uses tools, and interacts with services to complete a task under defined constraints." }
+    ],
+    "correct": ["d"],
+    "explanation": "Agentic AI involves goal-directed behavior, tool use, and workflow execution: an AI system plans steps, uses tools, and interacts with services to complete a task under defined constraints. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 · AI workloads and considerations"
+  },
+  {
+    "id": "q064",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "Generative AI model selection (ordering)",
+    "type": "single",
+    "prompt": "A support operations team must select a generative AI model conceptually. Which option puts the following steps in the MOST appropriate order? Steps: Review model capability and limitations; Choose deployment and monitoring approach; Test representative prompts; Define task and required modality; Consider safety and privacy requirements.",
+    "options": [
+      { "id": "a", "text": "Define task and required modality → Review model capability and limitations → Consider safety and privacy requirements → Test representative prompts → Choose deployment and monitoring approach" },
+      { "id": "b", "text": "Review model capability and limitations → Choose deployment and monitoring approach → Test representative prompts → Define task and required modality → Consider safety and privacy requirements" },
+      { "id": "c", "text": "Consider safety and privacy requirements → Define task and required modality → Test representative prompts → Review model capability and limitations → Choose deployment and monitoring approach" },
+      { "id": "d", "text": "Test representative prompts → Consider safety and privacy requirements → Choose deployment and monitoring approach → Review model capability and limitations → Define task and required modality" }
+    ],
+    "correct": ["a"],
+    "explanation": "The correct order is: Define task and required modality → Review model capability and limitations → Consider safety and privacy requirements → Test representative prompts → Choose deployment and monitoring approach. This sequence moves from requirement analysis to selection, testing, and responsible implementation.",
+    "source": "AI-900 · Generative AI"
+  },
+  {
+    "id": "q065",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "Multimodal model selection",
+    "type": "single",
+    "prompt": "A financial services company needs to choose a model for a task that requires interpreting both text and images. Which option is the BEST fit?",
+    "options": [
+      { "id": "a", "text": "Use public storage for prompts, logs, and keys to simplify development." },
+      { "id": "b", "text": "Select a multimodal model that supports the required input and output modalities." },
+      { "id": "c", "text": "Store credentials directly in client-side application code." },
+      { "id": "d", "text": "Use the model output as final truth without validation or human review." }
+    ],
+    "correct": ["b"],
+    "explanation": "Model selection should consider modality, task fit, latency, cost, and safety needs. For a task that requires interpreting both text and images, select a multimodal model that supports the required input and output modalities. The distractors are insecure or skip responsible AI controls.",
+    "source": "AI-900 · Generative AI"
+  },
+  {
+    "id": "q066",
+    "category": "generative-ai",
+    "difficulty": "easy",
+    "subtopic": "Reducing hallucinations (grounding)",
+    "type": "single",
+    "prompt": "A manufacturing team is preparing for Azure AI Fundamentals. The key requirement is to reduce hallucinations in a factual assistant. What should be recommended? Assume the goal is a fundamentals-level Microsoft Azure AI answer.",
+    "options": [
+      { "id": "a", "text": "Remove source references to improve confidence." },
+      { "id": "b", "text": "Ground answers in approved sources, ask the model to cite supporting information, and return uncertainty when evidence is insufficient." },
+      { "id": "c", "text": "Choose the most complex model without evaluating the task requirements." },
+      { "id": "d", "text": "Assume all AI services require training a model from scratch." }
+    ],
+    "correct": ["b"],
+    "explanation": "Factual assistants need grounding, validation, and fallback behavior: ground answers in approved sources, ask the model to cite supporting information, and return uncertainty when evidence is insufficient. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 · Generative AI"
+  },
+  {
+    "id": "q067",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "Model capabilities matching",
+    "type": "single",
+    "prompt": "A media company is reviewing model capabilities. Which set correctly matches each item to its most appropriate description?",
+    "options": [
+      { "id": "a", "text": "Text generation → Creates written responses; Image generation → Creates visual output; Multimodal reasoning → Uses more than one input modality; Speech recognition → Converts audio to text; Information extraction → Turns unstructured content into structured data" },
+      { "id": "b", "text": "Text generation → Uses more than one input modality; Image generation → Creates written responses; Multimodal reasoning → Creates visual output; Speech recognition → Turns unstructured content into structured data; Information extraction → Converts audio to text" },
+      { "id": "c", "text": "Text generation → Converts audio to text; Image generation → Turns unstructured content into structured data; Multimodal reasoning → Creates written responses; Speech recognition → Creates visual output; Information extraction → Uses more than one input modality" },
+      { "id": "d", "text": "Text generation → Creates visual output; Image generation → Uses more than one input modality; Multimodal reasoning → Converts audio to text; Speech recognition → Creates written responses; Information extraction → Turns unstructured content into structured data" }
+    ],
+    "correct": ["a"],
+    "explanation": "Correct matches: Text generation → Creates written responses; Image generation → Creates visual output; Multimodal reasoning → Uses more than one input modality; Speech recognition → Converts audio to text; Information extraction → Turns unstructured content into structured data. These connect each capability to its primary purpose.",
+    "source": "AI-900 · Generative AI"
   }
 ]
