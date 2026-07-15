@@ -13,6 +13,7 @@ interface Props {
   diffCounts: Record<string, number>;
   onDifficulty: (d: DifficultyFilter) => void;
   onStart: (f: Filter) => void;
+  activeId: string;
   setProgress: (p: Progress) => void;
 }
 
@@ -32,6 +33,7 @@ export function Home({
   diffCounts,
   onDifficulty,
   onStart,
+  activeId,
   setProgress,
 }: Props) {
   const answered = all.filter((q) => progress[q.id]).length;
@@ -111,13 +113,13 @@ export function Home({
       <section className="card">
         <h2>Progress</h2>
         <p className="muted">
-          {answered} of {all.length} questions answered on this device.
+          {answered} of {all.length} questions answered by this profile.
         </p>
         <button
           className="ghost"
           onClick={() => {
-            if (confirm("Erase all progress saved on this device?")) {
-              setProgress(resetProgress());
+            if (confirm("Erase all progress for this profile?")) {
+              setProgress(resetProgress(activeId));
             }
           }}
         >

@@ -5,8 +5,17 @@ import type { CategoryKey, Difficulty } from "./categories";
 import { Home } from "./components/Home";
 import { Study } from "./components/Study";
 import { Report } from "./components/Report";
+import { Profiles } from "./components/Profiles";
 import { loadProgress, saveProgress, recordAnswer } from "./lib/progress";
 import type { Progress } from "./lib/progress";
+import {
+  loadProfiles,
+  getActiveProfileId,
+  setActiveProfileId,
+  createProfile,
+  deleteProfile,
+} from "./lib/profiles";
+import type { Profile } from "./lib/profiles";
 
 const ALL: Question[] = rawQuestions as Question[];
 
@@ -23,9 +32,45 @@ type View =
   | { name: "report"; queue: Question[] };
 
 export default function App() {
-  const [progress, setProgress] = useState<Progress>(() => loadProgress());
+  const [profiles, setProfiles] = useState<Profile[]>(() => loadProfiles());
+  const [activeId, setActiveId] = useState<string | null>(() => {
+    const id = getActiveProfileId();
+    // só válido se o perfil ainda existir
+    return id && loadProfiles().some((p) => p.id === id) ? id : null;
+  });
+  const [picking, setPicking] = useState(false);
+
+  const [progress, setProgress] = useState<Progress>(() =>
+    activeId ? loadProgress(activeId) : {}
+  );
   const [difficulty, setDifficulty] = useState<DifficultyFilter>("all");
   const [view, setView] = useState<View>({ name: "home" });
+
+  const activeProfile = profiles.find((p) => p.id === activeId) ?? null;
+
+  const selectProfile = (id: string) => {
+    setActiveProfileId(id);
+    setActiveId(id);
+    setProgress(loadProgress(id));
+    setDifficulty("all");
+    setView({ name: "home" });
+    setPicking(false);
+  };
+
+  const onCreateProfile = (name: string, avatar: string) => {
+    const { list, profile } = createProfile(name, avatar);
+    setProfiles(list);
+    selectProfile(profile.id);
+  };
+
+  const onDeleteProfile = (id: string) => {
+    const list = deleteProfile(id);
+    setProfiles(list);
+    if (id === activeId) {
+      setActiveId(null);
+      setProgress({});
+    }
+  };
 
   // pool = questions matching the active difficulty sub-filter
   const pool = useMemo(
@@ -46,10 +91,11 @@ export default function App() {
   };
 
   const onAnswer = (questionId: string, correct: boolean) => {
+    if (!activeId) return;
     // Date.now via new Date is fine in the browser (runtime, not the build script)
     const next = recordAnswer(progress, questionId, correct, new Date().toISOString());
     setProgress(next);
-    saveProgress(next);
+    saveProgress(activeId, next);
   };
 
   const counts = useMemo(() => {
@@ -64,14 +110,40 @@ export default function App() {
     return byDiff;
   }, []);
 
+  // Sem perfil ativo, ou a trocar de perfil → mostra o seletor.
+  const showProfiles = !activeId || picking;
+
   return (
     <div className="app">
       <header className="topbar">
         <h1>🧠 AI-900 · Study</h1>
-        <span className="muted">{ALL.length} questions in the DB</span>
+        {activeProfile && !showProfiles ? (
+          <button
+            className="profile-chip"
+            title="Switch profile"
+            onClick={() => setPicking(true)}
+          >
+            <span className="avatar sm">{activeProfile.avatar}</span>
+            <span>{activeProfile.name}</span>
+          </button>
+        ) : (
+          <span className="muted">{ALL.length} questions in the DB</span>
+        )}
       </header>
 
-      {view.name === "home" && (
+      {showProfiles && (
+        <Profiles
+          profiles={profiles}
+          activeId={activeId}
+          total={ALL.length}
+          onSelect={selectProfile}
+          onCreate={onCreateProfile}
+          onDelete={onDeleteProfile}
+          onCancel={activeId ? () => setPicking(false) : undefined}
+        />
+      )}
+
+      {!showProfiles && view.name === "home" && (
         <Home
           all={pool}
           progress={progress}
@@ -80,11 +152,12 @@ export default function App() {
           diffCounts={diffCounts}
           onDifficulty={setDifficulty}
           onStart={start}
+          activeId={activeId!}
           setProgress={setProgress}
         />
       )}
 
-      {view.name === "study" && (
+      {!showProfiles && view.name === "study" && (
         <Study
           queue={view.queue}
           progress={progress}
@@ -94,7 +167,7 @@ export default function App() {
         />
       )}
 
-      {view.name === "report" && (
+      {!showProfiles && view.name === "report" && (
         <Report
           queue={view.queue}
           progress={progress}
