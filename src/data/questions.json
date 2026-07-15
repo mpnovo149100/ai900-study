@@ -31528,5 +31528,98 @@
     ],
     "explanation": "The portal is useful for exploration, while apps provide repeatable user experiences and integration. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
     "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1004",
+    "category": "generative-ai",
+    "difficulty": "hard",
+    "subtopic": "content-safety",
+    "type": "single",
+    "prompt": "Leo Martinez at NovaSpark Labs is implementing content safety for their GPT-4o deployment. The application serves a diverse enterprise customer base. Leo needs to configure Azure AI Content Safety to: block violent and sexual content at all severity levels, allow professional discussions about alcohol and tobacco (relevant for their retail clients), block self-harm content, and allow references to firearms only in the context of security industry clients. The standard content safety categories are: violence, sexual, self-harm, and hate. What content safety configuration approach should Leo use to meet these nuanced requirements?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Disable content safety entirely and rely on the system prompt to instruct the model about which topics are allowed and which are blocked."
+      },
+      {
+        "id": "b",
+        "text": "Create separate model deployments for each client industry, each with different content safety settings, routing requests based on the client's industry classification."
+      },
+      {
+        "id": "c",
+        "text": "Configure the built-in content safety categories with appropriate severity thresholds for each (strict for sexual and self-harm, moderate for violence to allow security context discussions), supplemented by custom blocklists for specific prohibited terms."
+      },
+      {
+        "id": "d",
+        "text": "Set all four categories to the strictest level and accept that some legitimate business discussions will be blocked, since safety always takes absolute priority over business needs."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "The correct approach uses Azure AI Content Safety's configurable severity thresholds to create nuanced content filtering that matches the business requirements. Leo should: set sexual content filtering to strict (blocking all severity levels), set self-harm filtering to strict, set violence filtering to a moderate threshold that allows professional security-context discussions while blocking gratuitous violence, and configure hate filtering appropriately. Custom blocklists supplement the built-in categories by blocking specific terms that are inappropriate for NovaSpark's context but might not be caught by the general categories. This calibrated approach provides safety without blocking legitimate business discussions. Setting everything to maximum strictness would block valid security industry discussions. Disabling safety entirely creates unacceptable risk.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1005",
+    "category": "nlp",
+    "difficulty": "hard",
+    "subtopic": "text-analysis",
+    "type": "single",
+    "prompt": "Kenji reads this Python code: from azure.ai.textanalytics import TextAnalyticsClient client = TextAnalyticsClient(endpoint, credential) result = client.analyze_sentiment(documents=['Great product! Love it.']) for doc in result: print(doc.sentiment, doc.confidence_scores) Kenji is checking the result during a workshop, so the printed values must be easy for learners to compare with the SDK documentation. What will this code output?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The sentiment (positive/negative/neutral) and confidence scores for the input text."
+      },
+      {
+        "id": "b",
+        "text": "A translated version of the text."
+      },
+      {
+        "id": "c",
+        "text": "The number of words in the text."
+      },
+      {
+        "id": "d",
+        "text": "An error because the code is invalid."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "This code uses the Text Analytics client to perform sentiment analysis on 'Great product! Love it.' It will output the detected sentiment (likely 'positive') and the confidence scores for positive, negative, and neutral. Deployed model endpoints accept HTTP POST requests with JSON payloads containing the prompt and parameters. The response includes the generated text, usage statistics, and metadata about the inference.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1006",
+    "category": "ai-workloads",
+    "difficulty": "hard",
+    "subtopic": "responsible-ai",
+    "type": "single",
+    "prompt": "MediBridge Health uses an AI system to prioritise patient appointments. When the system makes a scheduling error that causes a patient to miss critical treatment, Dr. Amara Okafor, the chief medical informatics officer at MediBridge Health, needs to determine who is responsible. The incident report must describe escalation paths, approval roles, monitoring evidence, and how affected appointments are corrected. Amara is not trying to blame a single developer; she needs a governance model showing which people own design, deployment, oversight, and remediation. Which responsible AI principle ensures that people and organisations are answerable for the decisions and actions of AI systems?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Accountability"
+      },
+      {
+        "id": "b",
+        "text": "Transparency"
+      },
+      {
+        "id": "c",
+        "text": "Fairness"
+      },
+      {
+        "id": "d",
+        "text": "Reliability and safety"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Accountability means that people and organisations must be answerable for AI system behaviour. Even though the AI made the decision, humans must take responsibility for the outcomes and have processes to address failures. Microsoft's responsible AI framework is a core component of the AI-901 exam. Candidates must understand how each principle applies in real-world AI deployments and how to implement appropriate safeguards.",
+    "source": "AI-900 / AI-901 exam alignment"
   }
 ]
