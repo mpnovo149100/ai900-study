@@ -26483,5 +26483,1105 @@
     ],
     "explanation": "Enterprise assistants often need grounding, retrieval, and access control.",
     "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q843",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "responsible-ai",
+    "type": "single",
+    "prompt": "An enterprise knowledge-management group is preparing for Azure AI Fundamentals. The key requirement is to add safety controls to a public-facing generative AI app. What should be recommended? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Remove filters so users can ask anything."
+      },
+      {
+        "id": "b",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "c",
+        "text": "Use content filters, grounded prompts, logging, user guidance, and escalation paths for unsafe or uncertain outputs."
+      },
+      {
+        "id": "d",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Production AI apps need safety, transparency, and governance controls. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q844",
+    "category": "ai-workloads",
+    "difficulty": "hard",
+    "subtopic": "safety-controls",
+    "type": "single",
+    "prompt": "A business analyst is reviewing application safety controls. Match each item to the most appropriate description (Input validation; Output validation; Credential protection; Rate limiting; Human review).",
+    "options": [
+      {
+        "id": "a",
+        "text": "Input validation → Checks request shape and allowed content; Output validation → Checks model responses before use; Credential protection → Keeps keys out of public code; Rate limiting → Protects services from bursts; Human review → Approves high-impact or uncertain outputs."
+      },
+      {
+        "id": "b",
+        "text": "Input validation → Protects services from bursts; Output validation → Approves high-impact or uncertain outputs; Credential protection → Checks model responses before use; Rate limiting → Keeps keys out of public code; Human review → Checks request shape and allowed content."
+      },
+      {
+        "id": "c",
+        "text": "Input validation → Checks request shape and allowed content; Output validation → Keeps keys out of public code; Credential protection → Checks model responses before use; Rate limiting → Protects services from bursts; Human review → Approves high-impact or uncertain outputs."
+      },
+      {
+        "id": "d",
+        "text": "Input validation → Keeps keys out of public code; Output validation → Checks model responses before use; Credential protection → Checks request shape and allowed content; Rate limiting → Approves high-impact or uncertain outputs; Human review → Protects services from bursts."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Correct matches: Input validation → Checks request shape and allowed content; Output validation → Checks model responses before use; Credential protection → Keeps keys out of public code; Rate limiting → Protects services from bursts; Human review → Approves high-impact or uncertain outputs. These matches connect each concept or service to its primary purpose.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q845",
+    "category": "generative-ai",
+    "difficulty": "hard",
+    "subtopic": "foundry-mapping",
+    "type": "single",
+    "prompt": "A healthcare organization is reviewing Foundry implementation concepts. Match each item to the most appropriate description (Foundry portal; Foundry SDK; System prompt; Agent tool; Content Understanding).",
+    "options": [
+      {
+        "id": "a",
+        "text": "Foundry portal → Explore, deploy, and test models; Foundry SDK → Build applications that call AI services; System prompt → Defines durable assistant behavior; Agent tool → Allows controlled action or retrieval; Content Understanding → Extracts information from multimodal content."
+      },
+      {
+        "id": "b",
+        "text": "Foundry portal → Build applications that call AI services; Foundry SDK → Explore, deploy, and test models; System prompt → Defines durable assistant behavior; Agent tool → Allows controlled action or retrieval; Content Understanding → Extracts information from multimodal content."
+      },
+      {
+        "id": "c",
+        "text": "Foundry portal → Explore, deploy, and test models; Foundry SDK → Build applications that call AI services; System prompt → Allows controlled action or retrieval; Agent tool → Defines durable assistant behavior; Content Understanding → Extracts information from multimodal content."
+      },
+      {
+        "id": "d",
+        "text": "Foundry portal → Explore, deploy, and test models; Foundry SDK → Defines durable assistant behavior; System prompt → Build applications that call AI services; Agent tool → Extracts information from multimodal content; Content Understanding → Allows controlled action or retrieval."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Correct matches: Foundry portal → Explore, deploy, and test models; Foundry SDK → Build applications that call AI services; System prompt → Defines durable assistant behavior; Agent tool → Allows controlled action or retrieval; Content Understanding → Extracts information from multimodal content. These matches connect each concept or service to its primary purpose.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q846",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "app-architecture",
+    "type": "single",
+    "prompt": "During an AI-900 / AI-901 review, a retail company identifies a need to build a simple app that accepts user input, calls an AI model, and returns a response. What is the best answer? Assume the goal is a fundamentals-level Microsoft Azure AI answer.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Store all prompts and secrets in public static files."
+      },
+      {
+        "id": "b",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "c",
+        "text": "Use the model output as final truth without validation or human review."
+      },
+      {
+        "id": "d",
+        "text": "Use a client interface, a secure backend or service layer, authenticated calls to the AI service, validation, logging, and safe response handling."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "Even lightweight apps need secure credentials and input/output handling. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q847",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "sdk-integration",
+    "type": "single",
+    "prompt": "Which choice best satisfies the requirement to use Python to send a prompt and process a model response for a public-sector agency?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Put secrets in print statements."
+      },
+      {
+        "id": "b",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "c",
+        "text": "Use variables, functions, SDK client calls, error handling, and response parsing according to the service documentation."
+      },
+      {
+        "id": "d",
+        "text": "Store credentials directly in client-side application code."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "AI-901 expects foundational technical skills, including Python syntax and app integration concepts. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q848",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "resource-organization",
+    "type": "single",
+    "prompt": "A contact center needs to organize AI resources for a prototype. Which option is the BEST fit? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use an Azure subscription, resource group, appropriate AI service or project resource, and access control aligned to the workload."
+      },
+      {
+        "id": "b",
+        "text": "Use only a local folder as the Azure resource."
+      },
+      {
+        "id": "c",
+        "text": "Assume all AI services require training a model from scratch."
+      },
+      {
+        "id": "d",
+        "text": "Use the model output as final truth without validation or human review."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Azure resources should be organized and secured even for prototypes.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q849",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "prompt-testing",
+    "type": "single",
+    "prompt": "A school administration team is preparing for Azure AI Fundamentals. The key requirement is to test a prompt before embedding it in an application. What should be recommended?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use the portal or a test harness to try representative inputs, edge cases, expected output formats, and safety scenarios."
+      },
+      {
+        "id": "b",
+        "text": "Assume all AI services require training a model from scratch."
+      },
+      {
+        "id": "c",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "d",
+        "text": "Use the model output as final truth without validation or human review."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Prompts are application artifacts and should be tested. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q850",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "extraction-validation",
+    "type": "single",
+    "prompt": "A junior developer is preparing for Azure AI Fundamentals. The key requirement is to prevent bad extracted values from updating a system of record. What should be recommended?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Store credentials directly in client-side application code."
+      },
+      {
+        "id": "b",
+        "text": "Validate extracted fields against schemas, confidence thresholds, business rules, and human review paths for ambiguous cases."
+      },
+      {
+        "id": "c",
+        "text": "Write every extracted field directly to production."
+      },
+      {
+        "id": "d",
+        "text": "Assume all AI services require training a model from scratch."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Extraction workflows need validation before they change important data. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q851",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "prompt-injection",
+    "type": "single",
+    "prompt": "A candidate must understand how to protect an AI app that uses user-provided instructions and documents. Which statement is most accurate? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Treat user and document content as untrusted, keep system instructions separate, restrict tool actions, and validate outputs."
+      },
+      {
+        "id": "b",
+        "text": "Use the model output as final truth without validation or human review."
+      },
+      {
+        "id": "c",
+        "text": "Send all private customer data to the model regardless of user permissions."
+      },
+      {
+        "id": "d",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Prompt injection is a risk in generative and agentic AI applications. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q852",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "agents",
+    "type": "single",
+    "prompt": "A financial services company wants a fundamentals-level Azure AI solution that can let an agent retrieve information without allowing unsafe changes. Which approach should be selected?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Provide read-only tools where possible, validate tool parameters, require confirmation for changes, and log tool calls."
+      },
+      {
+        "id": "b",
+        "text": "Assume all AI services require training a model from scratch."
+      },
+      {
+        "id": "c",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "d",
+        "text": "Send all private customer data to the model regardless of user permissions."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Tool-enabled agents need explicit constraints outside the model.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q853",
+    "category": "ai-workloads",
+    "difficulty": "hard",
+    "subtopic": "service-mapping",
+    "type": "single",
+    "prompt": "A manufacturing team is reviewing Azure AI service capabilities. Match each item to the most appropriate description (Azure AI Language; Azure AI Speech; Azure AI Vision; Azure OpenAI; Azure Machine Learning).",
+    "options": [
+      {
+        "id": "a",
+        "text": "Azure AI Language → Text analysis capabilities; Azure AI Speech → Speech-to-text and text-to-speech; Azure AI Vision → Image analysis capabilities; Azure OpenAI → Generative AI model access; Azure Machine Learning → Model training and management capabilities."
+      },
+      {
+        "id": "b",
+        "text": "Azure AI Language → Speech-to-text and text-to-speech; Azure AI Speech → Text analysis capabilities; Azure AI Vision → Generative AI model access; Azure OpenAI → Image analysis capabilities; Azure Machine Learning → Model training and management capabilities."
+      },
+      {
+        "id": "c",
+        "text": "Azure AI Language → Text analysis capabilities; Azure AI Speech → Speech-to-text and text-to-speech; Azure AI Vision → Model training and management capabilities; Azure OpenAI → Generative AI model access; Azure Machine Learning → Image analysis capabilities."
+      },
+      {
+        "id": "d",
+        "text": "Azure AI Language → Image analysis capabilities; Azure AI Speech → Generative AI model access; Azure AI Vision → Text analysis capabilities; Azure OpenAI → Speech-to-text and text-to-speech; Azure Machine Learning → Model training and management capabilities."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Correct matches: Azure AI Language → Text analysis capabilities; Azure AI Speech → Speech-to-text and text-to-speech; Azure AI Vision → Image analysis capabilities; Azure OpenAI → Generative AI model access; Azure Machine Learning → Model training and management capabilities. These matches connect each concept or service to its primary purpose.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q854",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "foundry-portal",
+    "type": "single",
+    "prompt": "A contact center needs to deploy a model and test it interactively before building a client application. Which option is the BEST fit?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use the model output as final truth without validation or human review."
+      },
+      {
+        "id": "b",
+        "text": "Assume all AI services require training a model from scratch."
+      },
+      {
+        "id": "c",
+        "text": "Use the Microsoft Foundry portal to select or deploy the model, test prompts, review settings, and capture the endpoint or project details for the application."
+      },
+      {
+        "id": "d",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "The Foundry portal supports model exploration, deployment, and testing before application integration.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q855",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "foundry-sdk",
+    "type": "single",
+    "prompt": "A school administration team is preparing for Azure AI Fundamentals. The key requirement is to build a lightweight chat application that calls a deployed model. What should be recommended? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use the Foundry SDK with managed authentication, endpoint configuration, prompt construction, error handling, and response parsing."
+      },
+      {
+        "id": "b",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "c",
+        "text": "Put the service key in browser JavaScript."
+      },
+      {
+        "id": "d",
+        "text": "Call an undocumented endpoint with no authentication."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "A client application should use supported SDKs or APIs with secure authentication and error handling. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q856",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "prompt-engineering",
+    "type": "single",
+    "prompt": "A candidate must understand how to write a prompt that guides a generative model to produce a structured support summary. Which statement is most accurate?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Assume all AI services require training a model from scratch."
+      },
+      {
+        "id": "b",
+        "text": "Put all private customer records into every prompt."
+      },
+      {
+        "id": "c",
+        "text": "Provide clear system instructions, user context, required output format, constraints, and examples where helpful."
+      },
+      {
+        "id": "d",
+        "text": "Disable safety controls to reduce latency."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Effective prompts make the task, constraints, and expected format explicit. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q857",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "system-user-messages",
+    "type": "single",
+    "prompt": "A document processing team wants a fundamentals-level Azure AI solution that can control the assistant's general behavior while still accepting user-specific questions. Which approach should be selected?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "b",
+        "text": "Use system instructions for persistent behavior and user messages for the current request or conversation turn."
+      },
+      {
+        "id": "c",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "d",
+        "text": "Store system prompts only in generated answers."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "System instructions define durable behavior; user prompts contain request-specific content.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q858",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "agents",
+    "type": "multi",
+    "prompt": "An Azure AI Fundamentals scenario requires an approach that can create an agent that can answer questions and use a tool to retrieve order status. Which TWO recommendations best support this goal? Consider transition-edition practice item 425 in this domain.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Let the agent call any API with administrator permissions."
+      },
+      {
+        "id": "b",
+        "text": "Use Azure Content Understanding in Foundry Tools or an appropriate document extraction service, then validate extracted fields before downstream use."
+      },
+      {
+        "id": "c",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      },
+      {
+        "id": "d",
+        "text": "Store credentials directly in client-side application code."
+      },
+      {
+        "id": "e",
+        "text": "Create and test a single-agent solution with defined instructions, tool schema, authentication, and controlled test cases."
+      }
+    ],
+    "correct": [
+      "b",
+      "e"
+    ],
+    "explanation": "Agent tools must be defined and constrained so the agent can act safely. Also, document extraction solutions convert unstructured documents into structured fields but still need validation. Both correct choices support the requirement; the distractors overcomplicate the solution, use the wrong modality, or bypass responsible AI practices.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q859",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "agents",
+    "type": "single",
+    "prompt": "Which choice best satisfies the requirement to build a lightweight client for an agent solution for an enterprise knowledge-management group?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Expose agent credentials in public code."
+      },
+      {
+        "id": "b",
+        "text": "Use the supported agent client interface or SDK, authenticate securely, pass user messages, handle tool results, and display responses safely."
+      },
+      {
+        "id": "c",
+        "text": "Ignore tool failures and display partial answers as final."
+      },
+      {
+        "id": "d",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Agent clients need secure credentials, state handling, error handling, and safe output display. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q860",
+    "category": "nlp",
+    "difficulty": "medium",
+    "subtopic": "text-analysis",
+    "type": "single",
+    "prompt": "A business analyst needs to build a lightweight application that extracts sentiment and key phrases from feedback. Which option is the BEST fit? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Choose the most complex model without evaluating the task requirements."
+      },
+      {
+        "id": "b",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "c",
+        "text": "Use Azure AI Language or Foundry-supported text analysis capabilities through the appropriate SDK/API and process the returned fields."
+      },
+      {
+        "id": "d",
+        "text": "Train a custom model before trying built-in text analysis."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Text analysis capabilities can extract sentiment, key phrases, and entities from text.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q861",
+    "category": "nlp",
+    "difficulty": "medium",
+    "subtopic": "speech",
+    "type": "multi",
+    "prompt": "An Azure AI Fundamentals scenario requires an approach that can build an app that transcribes spoken prompts and responds with speech. Which TWO recommendations best support this goal? Consider transition-edition practice item 428 in this domain.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use the model output as final truth without validation or human review."
+      },
+      {
+        "id": "b",
+        "text": "Use the documented REST API or SDK with endpoint, authentication, request schema, retry handling, and response parsing."
+      },
+      {
+        "id": "c",
+        "text": "Use Azure Speech capabilities or Foundry Tools for speech-to-text and text-to-speech, then connect the text to the AI workflow."
+      },
+      {
+        "id": "d",
+        "text": "Use image generation to synthesize audio."
+      },
+      {
+        "id": "e",
+        "text": "Ignore audio format and latency requirements."
+      }
+    ],
+    "correct": [
+      "b",
+      "c"
+    ],
+    "explanation": "Speech solutions often combine transcription, language understanding, response generation, and synthesis. Also, service integrations need supported APIs and secure operational practices. Both correct choices support the requirement; the distractors overcomplicate the solution, use the wrong modality, or bypass responsible AI practices.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q862",
+    "category": "computer-vision",
+    "difficulty": "medium",
+    "subtopic": "multimodal",
+    "type": "single",
+    "prompt": "A candidate must understand how to interpret a visual input together with a user question. Which statement is most accurate? Consider transition-edition practice item 429 in this domain.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use a deployed multimodal model that accepts image or visual input plus text instructions."
+      },
+      {
+        "id": "b",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "c",
+        "text": "Assume all AI services require training a model from scratch."
+      },
+      {
+        "id": "d",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Multimodal models can process visual and text inputs together. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q863",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "image-generation",
+    "type": "single",
+    "prompt": "A candidate must understand how to generate new marketing concept images from text prompts. Which statement is most accurate? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use speech-to-text."
+      },
+      {
+        "id": "b",
+        "text": "Use an image-generation model in Foundry and review safety, prompt, and output requirements before using results."
+      },
+      {
+        "id": "c",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "d",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Image generation is a generative AI workload with visual output. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q864",
+    "category": "computer-vision",
+    "difficulty": "medium",
+    "subtopic": "image-analysis",
+    "type": "single",
+    "prompt": "A startup building an Azure AI prototype wants a fundamentals-level Azure AI solution that can build a lightweight application that analyzes uploaded images. Which approach should be selected?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "b",
+        "text": "Use vision-capable Azure AI services or a multimodal model, validate file inputs, call the service securely, and handle returned labels or descriptions."
+      },
+      {
+        "id": "c",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "d",
+        "text": "Choose the most complex model without evaluating the task requirements."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Vision applications need suitable models/services plus secure input handling.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q865",
+    "category": "computer-vision",
+    "difficulty": "medium",
+    "subtopic": "document-extraction",
+    "type": "single",
+    "prompt": "During an AI-900 / AI-901 review, a customer service department identifies a need to extract structured fields from invoices and forms. What is the best answer?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "b",
+        "text": "Use Azure Content Understanding in Foundry Tools or an appropriate document extraction service, then validate extracted fields before downstream use."
+      },
+      {
+        "id": "c",
+        "text": "Use the model output as final truth without validation or human review."
+      },
+      {
+        "id": "d",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Document extraction solutions convert unstructured documents into structured fields but still need validation. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q866",
+    "category": "ai-workloads",
+    "difficulty": "hard",
+    "subtopic": "safety-controls",
+    "type": "single",
+    "prompt": "A junior developer is reviewing application safety controls. Match each item to the most appropriate description (Input validation; Output validation; Credential protection; Rate limiting; Human review).",
+    "options": [
+      {
+        "id": "a",
+        "text": "Input validation → Checks request shape and allowed content; Output validation → Checks model responses before use; Credential protection → Keeps keys out of public code; Rate limiting → Protects services from bursts; Human review → Approves high-impact or uncertain outputs."
+      },
+      {
+        "id": "b",
+        "text": "Input validation → Protects services from bursts; Output validation → Approves high-impact or uncertain outputs; Credential protection → Checks model responses before use; Rate limiting → Keeps keys out of public code; Human review → Checks request shape and allowed content."
+      },
+      {
+        "id": "c",
+        "text": "Input validation → Checks request shape and allowed content; Output validation → Keeps keys out of public code; Credential protection → Checks model responses before use; Rate limiting → Protects services from bursts; Human review → Approves high-impact or uncertain outputs."
+      },
+      {
+        "id": "d",
+        "text": "Input validation → Keeps keys out of public code; Output validation → Checks model responses before use; Credential protection → Checks request shape and allowed content; Rate limiting → Approves high-impact or uncertain outputs; Human review → Protects services from bursts."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Correct matches: Input validation → Checks request shape and allowed content; Output validation → Checks model responses before use; Credential protection → Keeps keys out of public code; Rate limiting → Protects services from bursts; Human review → Approves high-impact or uncertain outputs. These matches connect each concept or service to its primary purpose.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q867",
+    "category": "nlp",
+    "difficulty": "medium",
+    "subtopic": "audio-video",
+    "type": "single",
+    "prompt": "A support operations team needs to extract information from audio or video files. Which option is the BEST fit?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use public storage for prompts, logs, and keys to simplify development."
+      },
+      {
+        "id": "b",
+        "text": "Use Content Understanding or appropriate speech/video analysis capabilities to transcribe, segment, and extract relevant information."
+      },
+      {
+        "id": "c",
+        "text": "Store credentials directly in client-side application code."
+      },
+      {
+        "id": "d",
+        "text": "Ignore privacy and retention of media content."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Audio and video workloads often require transcription, segmentation, and multimodal analysis.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q868",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "sdk-integration",
+    "type": "single",
+    "prompt": "A financial services company is preparing for Azure AI Fundamentals. The key requirement is to call an Azure AI service from a lightweight application. What should be recommended? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "b",
+        "text": "Use the documented REST API or SDK with endpoint, authentication, request schema, retry handling, and response parsing."
+      },
+      {
+        "id": "c",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      },
+      {
+        "id": "d",
+        "text": "Choose the most complex model without evaluating the task requirements."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Service integrations need supported APIs and secure operational practices. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q869",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "credential-security",
+    "type": "single",
+    "prompt": "A candidate must understand how to avoid hard-coded secrets in a local AI prototype. Which statement is most accurate?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use the model output as final truth without validation or human review."
+      },
+      {
+        "id": "b",
+        "text": "Place keys directly in the source code."
+      },
+      {
+        "id": "c",
+        "text": "Use secure credential handling such as managed identity where available, environment-secured secrets, or approved key vault practices."
+      },
+      {
+        "id": "d",
+        "text": "Store credentials directly in client-side application code."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Credentials should be protected even in prototypes. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q870",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "tooling",
+    "type": "multi",
+    "prompt": "A media company must design or identify a solution to inspect or configure Azure AI resources from a terminal. Which TWO actions or concepts are most appropriate?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use the model output as final truth without validation or human review."
+      },
+      {
+        "id": "b",
+        "text": "Increase creativity settings to guarantee factual accuracy."
+      },
+      {
+        "id": "c",
+        "text": "Use CLI output as a replacement for testing application behavior."
+      },
+      {
+        "id": "d",
+        "text": "Use variables, functions, SDK client calls, error handling, and response parsing according to the service documentation."
+      },
+      {
+        "id": "e",
+        "text": "Use Azure CLI commands with authenticated identity and the required resource group, project, or service parameters."
+      }
+    ],
+    "correct": [
+      "d",
+      "e"
+    ],
+    "explanation": "CLI tools can help manage resources, but they do not replace app-level validation. Also, AI-901 expects foundational technical skills, including Python syntax and app integration concepts. Both correct choices support the requirement; the distractors overcomplicate the solution, use the wrong modality, or bypass responsible AI practices.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q871",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "model-catalog",
+    "type": "single",
+    "prompt": "During an AI-900 / AI-901 review, a legal operations team identifies a need to compare candidate models for a generative AI prototype. What is the best answer? Assume the goal is a fundamentals-level Microsoft Azure AI answer.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use the first model listed without testing."
+      },
+      {
+        "id": "b",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "c",
+        "text": "Choose the model with the longest name."
+      },
+      {
+        "id": "d",
+        "text": "Review model capabilities, modalities, context limits, deployment options, cost, and responsible AI requirements in the model catalog."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "Model catalogs help compare available models and select based on task requirements. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q872",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "grounding-rag",
+    "type": "single",
+    "prompt": "Which choice best satisfies the requirement to build a chat assistant that answers based on enterprise policy documents for a logistics company?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "b",
+        "text": "Let the model answer without sources."
+      },
+      {
+        "id": "c",
+        "text": "Use a generative model with grounding over approved documents, access controls, prompt design, and response validation."
+      },
+      {
+        "id": "d",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Enterprise assistants often need grounding, retrieval, and access control. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q873",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "responsible-ai",
+    "type": "single",
+    "prompt": "A marketing analytics group needs to add safety controls to a public-facing generative AI app. Which option is the BEST fit? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Remove filters so users can ask anything."
+      },
+      {
+        "id": "b",
+        "text": "Use content filters, grounded prompts, logging, user guidance, and escalation paths for unsafe or uncertain outputs."
+      },
+      {
+        "id": "c",
+        "text": "Assume all AI services require training a model from scratch."
+      },
+      {
+        "id": "d",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Production AI apps need safety, transparency, and governance controls.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q874",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "error-handling",
+    "type": "single",
+    "prompt": "A startup building an Azure AI prototype is preparing for Azure AI Fundamentals. The key requirement is to handle throttling or service errors from an AI endpoint. What should be recommended?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Store credentials directly in client-side application code."
+      },
+      {
+        "id": "b",
+        "text": "Choose the most complex model without evaluating the task requirements."
+      },
+      {
+        "id": "c",
+        "text": "Classify errors, retry transient failures with backoff, respect rate limits, and return user-safe fallback messages."
+      },
+      {
+        "id": "d",
+        "text": "Disable safety controls to reduce latency."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Robust apps handle AI service failures safely and predictably. The distractors confuse workload type, skip responsible AI controls, or use a service for the wrong task.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q875",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "output-validation",
+    "type": "single",
+    "prompt": "A candidate must understand how to use model output in a downstream system. Which statement is most accurate? Consider transition-edition practice item 442 in this domain.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Request structured output where possible, validate schema and values in code, and reject or review unsafe outputs."
+      },
+      {
+        "id": "b",
+        "text": "Send all private customer data to the model regardless of user permissions."
+      },
+      {
+        "id": "c",
+        "text": "Assume all AI services require training a model from scratch."
+      },
+      {
+        "id": "d",
+        "text": "Assume valid JSON because the model said it is JSON."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Applications should validate model output before downstream use. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q876",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "app-architecture",
+    "type": "single",
+    "prompt": "A candidate must understand how to build a simple app that accepts user input, calls an AI model, and returns a response. Which statement is most accurate? The answer should avoid unnecessary custom model training.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Choose the most complex model without evaluating the task requirements."
+      },
+      {
+        "id": "b",
+        "text": "Call Azure services directly from unauthenticated browser code."
+      },
+      {
+        "id": "c",
+        "text": "Use only one friendly prompt as proof that the solution is ready."
+      },
+      {
+        "id": "d",
+        "text": "Use a client interface, a secure backend or service layer, authenticated calls to the AI service, validation, logging, and safe response handling."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "Even lightweight apps need secure credentials and input/output handling. For AI-900 / AI-901, the best answer usually matches the workload, data type, capability, and responsible implementation pattern.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q877",
+    "category": "ai-workloads",
+    "difficulty": "medium",
+    "subtopic": "sdk-integration",
+    "type": "single",
+    "prompt": "A contact center wants a fundamentals-level Azure AI solution that can use Python to send a prompt and process a model response. Which approach should be selected?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Rely on memorized responses instead of grounding or validated sources."
+      },
+      {
+        "id": "b",
+        "text": "Choose the most complex model without evaluating the task requirements."
+      },
+      {
+        "id": "c",
+        "text": "Disable safety controls to reduce latency."
+      },
+      {
+        "id": "d",
+        "text": "Use variables, functions, SDK client calls, error handling, and response parsing according to the service documentation."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "AI-901 expects foundational technical skills, including Python syntax and app integration concepts.",
+    "source": "AI-900 / AI-901 exam alignment"
   }
 ]
