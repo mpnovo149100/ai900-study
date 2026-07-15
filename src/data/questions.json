@@ -31751,5 +31751,98 @@
     ],
     "explanation": "Azure AI Language, Azure Speech, and Azure Content Understanding are AI services available in Foundry Tools. Azure DevOps is a development platform and Microsoft Entra ID (Entra ID) is an identity service. Agent tools include code interpreter (executes Python code), file search (retrieves information from uploaded files), and custom functions (calls external APIs). Each tool extends the agent's capabilities beyond text generation.",
     "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1011",
+    "category": "ai-workloads",
+    "difficulty": "easy",
+    "subtopic": "responsible-ai",
+    "type": "single",
+    "prompt": "MediBridge Health is evaluating an AI diagnostic tool. Dr. Amara Okafor, the chief medical informatics officer at MediBridge Health, needs to verify it meets responsible AI standards before deployment in the emergency department. The assessment is part of a mandatory governance review required before any AI system can be approved for production deployment in the organisation. Which responsible AI principle states that AI systems should perform reliably under expected conditions and handle unexpected situations safely?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Inclusiveness"
+      },
+      {
+        "id": "b",
+        "text": "Reliability and safety"
+      },
+      {
+        "id": "c",
+        "text": "Fairness"
+      },
+      {
+        "id": "d",
+        "text": "Transparency"
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Reliability and safety ensures AI systems work correctly and consistently under normal conditions and fail gracefully when encountering unexpected inputs or situations. Microsoft's responsible AI framework is a core component of the AI-901 exam. Candidates must understand how each principle applies in real-world AI deployments and how to implement appropriate safeguards.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1012",
+    "category": "computer-vision",
+    "difficulty": "medium",
+    "subtopic": "ocr",
+    "type": "single",
+    "prompt": "DataForge receives scanned handwritten notes from clients that need to be converted to editable digital text. Azure AI Vision provides pre-built models for common computer vision tasks that can be deployed without custom training, reducing time to production. The notes may arrive as phone photos, scanned PDFs, or attachments from mobile field workers. DataForge needs editable text for search, indexing, and downstream review, while preserving enough source metadata to let a human check unclear handwriting when confidence is low. Which computer vision capability should DataForge use to extract text from these scanned images?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Image generation"
+      },
+      {
+        "id": "b",
+        "text": "Optical character recognition (OCR)"
+      },
+      {
+        "id": "c",
+        "text": "Image classification"
+      },
+      {
+        "id": "d",
+        "text": "Object detection"
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Optical Character Recognition (OCR) extracts text from images, including handwritten and printed text in scanned documents, photos, and PDFs. It converts visual text into machine-readable digital text. Azure AI Vision includes pre-built APIs for image analysis, OCR, and spatial analysis. For custom scenarios, Custom Vision enables training domain-specific models with as few as 15 images per class.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1013",
+    "category": "computer-vision",
+    "difficulty": "hard",
+    "subtopic": "image-analysis",
+    "type": "single",
+    "prompt": "Kenji Watanabe at DataForge Solutions is building a Python application using the Azure AI Vision SDK. The application needs to analyse product images uploaded by warehouse staff and return: a list of all products visible in the image with their locations, the text on any labels or tags visible in the image, and an overall description of the image contents. Kenji needs to construct the correct API call using the ImageAnalysisClient. Which visual features should Kenji request in the analyze() method call to get all three required outputs?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Request only VisualFeatures.TAGS, which automatically includes object detection, text extraction, and image description in a single comprehensive response."
+      },
+      {
+        "id": "b",
+        "text": "Request VisualFeatures.CAPTION only, then parse the caption text to extract object names and label text, since the caption describes everything in the image."
+      },
+      {
+        "id": "c",
+        "text": "Make three separate API calls, one for each feature, because Azure AI Vision only supports one visual feature per analyze() call."
+      },
+      {
+        "id": "d",
+        "text": "Request VisualFeatures.OBJECTS (product detection with locations), VisualFeatures.READ (text extraction from labels), and VisualFeatures.CAPTION (image description) in a single analyze() call."
+      }
+    ],
+    "correct": [
+      "d"
+    ],
+    "explanation": "The Azure AI Vision SDK's analyze() method accepts multiple visual features in a single API call. Kenji should request three specific features: OBJECTS returns a list of detected objects (products) with bounding box coordinates showing their locations in the image; READ extracts text from any visible labels, tags, or printed/handwritten text; and CAPTION generates a natural language description of the overall image contents. Requesting all three in a single call is more efficient than three separate calls and returns a comprehensive analysis result object. The response contains separate sections for each requested feature, each with its own confidence scores and structured data.",
+    "source": "AI-900 / AI-901 exam alignment"
   }
 ]
