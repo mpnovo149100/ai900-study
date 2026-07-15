@@ -31621,5 +31621,135 @@
     ],
     "explanation": "Accountability means that people and organisations must be answerable for AI system behaviour. Even though the AI made the decision, humans must take responsibility for the outcomes and have processes to address failures. Microsoft's responsible AI framework is a core component of the AI-901 exam. Candidates must understand how each principle applies in real-world AI deployments and how to implement appropriate safeguards.",
     "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1007",
+    "category": "computer-vision",
+    "difficulty": "medium",
+    "subtopic": "workload-identification",
+    "type": "single",
+    "prompt": "MediBridge Health wants to use AI to analyse X-ray images and identify potential abnormalities. Azure AI Vision provides pre-built models for common computer vision tasks that can be deployed without custom training, reducing time to production. The pilot uses de-identified images and requires review by radiologists before any result reaches a patient record. MediBridge is classifying the workload for architecture planning, governance, and service selection, not deciding whether the model is clinically approved. Which AI workload category does this task belong to?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Text analysis"
+      },
+      {
+        "id": "b",
+        "text": "Speech recognition"
+      },
+      {
+        "id": "c",
+        "text": "Computer vision"
+      },
+      {
+        "id": "d",
+        "text": "Generative AI"
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Analysing images (like X-rays) to identify patterns and abnormalities is a computer vision workload. Computer vision enables machines to interpret and understand visual information from images and video. Azure AI Vision includes pre-built APIs for image analysis, OCR, and spatial analysis. For custom scenarios, Custom Vision enables training domain-specific models with as few as 15 images per class.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1008",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "content-safety",
+    "type": "single",
+    "prompt": "Leo Martinez, a DevOps engineer at NovaSpark Labs — a 200-person AI startup that deploys models through Microsoft Foundry — wants to add content filtering to their image generation feature to prevent creating inappropriate images. Image processing pipelines must account for variable input quality and implement appropriate preprocessing, error handling, and fallback strategies for production reliability. How does Azure handle content safety for image generation?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Azure provides built-in content filtering that blocks harmful, inappropriate, or policy-violating prompts and outputs."
+      },
+      {
+        "id": "b",
+        "text": "Only manual review of every image is supported."
+      },
+      {
+        "id": "c",
+        "text": "Content safety is the developer's sole responsibility."
+      },
+      {
+        "id": "d",
+        "text": "There are no content safety controls."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "Azure provides built-in content filtering for both image generation prompts and outputs. The system automatically blocks attempts to generate harmful, inappropriate, or policy-violating content. Image analysis results include visual features (objects, people, text), tags, captions, and metadata. The API returns confidence scores for each detected element, enabling quality-based filtering.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1009",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "foundry-portal",
+    "type": "single",
+    "prompt": "Student Aisha Patel, a second-year computer science student at CloudPath Academy, wants to build her first AI application. Deployment configuration directly affects the application's performance, cost, and availability in production, making these settings critical operational decisions for the engineering team. The team is under a delivery review where product, security, and operations stakeholders need a defensible choice. The requirements include realistic input quality, exception handling, cost controls, privacy review, audit notes, and support ownership, but the background deliberately avoids naming the Azure feature so the learner must evaluate the options on their merits. What is the simplest way to start building a generative AI application with Azure?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use the Foundry portal to deploy a model and test it in the playground, then use the SDK to build your app."
+      },
+      {
+        "id": "b",
+        "text": "Build your own AI model from scratch."
+      },
+      {
+        "id": "c",
+        "text": "Purchase a dedicated GPU server."
+      },
+      {
+        "id": "d",
+        "text": "Write assembly language code."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The simplest path: deploy a pre-trained model from the Foundry catalogue, test it in the playground, then use the SDK to build your application. No custom model training or special hardware needed. Azure AI Foundry supports multiple deployment types: standard (shared throughput), provisioned (guaranteed throughput), and global (multi-region). Each has different cost, latency, and availability characteristics.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1010",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "foundry-tools",
+    "type": "multi",
+    "prompt": "NovaSpark is reviewing the Azure AI services available in Foundry Tools. Tools extend the agent's capabilities beyond text generation, enabling it to execute code, search documents, and interact with external systems to accomplish tasks that pure language generation cannot. The team is under a delivery review where product, security, and operations stakeholders need a defensible choice. The requirements include realistic input quality, exception handling, cost controls, privacy review, audit notes, and support ownership, but the background deliberately avoids naming the Azure feature so the learner must evaluate the options on their merits. Which THREE are Azure AI services available in Foundry Tools? (Select 3)",
+    "options": [
+      {
+        "id": "a",
+        "text": "Azure DevOps"
+      },
+      {
+        "id": "b",
+        "text": "Azure Speech"
+      },
+      {
+        "id": "c",
+        "text": "Azure Content Understanding"
+      },
+      {
+        "id": "d",
+        "text": "Microsoft Entra ID"
+      },
+      {
+        "id": "e",
+        "text": "Azure AI Language"
+      }
+    ],
+    "correct": [
+      "b",
+      "c",
+      "e"
+    ],
+    "explanation": "Azure AI Language, Azure Speech, and Azure Content Understanding are AI services available in Foundry Tools. Azure DevOps is a development platform and Microsoft Entra ID (Entra ID) is an identity service. Agent tools include code interpreter (executes Python code), file search (retrieves information from uploaded files), and custom functions (calls external APIs). Each tool extends the agent's capabilities beyond text generation.",
+    "source": "AI-900 / AI-901 exam alignment"
   }
 ]
