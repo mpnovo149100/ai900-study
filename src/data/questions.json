@@ -31875,5 +31875,129 @@
     ],
     "explanation": "Reliability and safety is relevant because the model is not performing correctly (misclassifying urgent items). Accountability is relevant because the organisation must take responsibility for the impact of these errors on customers. Microsoft's responsible AI framework is a core component of the AI-901 exam. Candidates must understand how each principle applies in real-world AI deployments and how to implement appropriate safeguards.",
     "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1015",
+    "category": "nlp",
+    "difficulty": "hard",
+    "subtopic": "speech",
+    "type": "single",
+    "prompt": "Dr. Amara Okafor at MediBridge Health is building a clinical notes application using Azure AI Speech SDK in Python. Clinicians dictate notes that can be 5-30 minutes long. The application must transcribe the dictation in real time (showing text as the clinician speaks), handle medical terminology accurately, and work in environments with background hospital noise. Dr. Amara has the basic SpeechRecognizer working but the transcription accuracy for medical terms like 'thrombocytopenia' and 'methylprednisolone' is poor. What is the MOST effective approach to improve medical terminology recognition accuracy in the speech-to-text pipeline?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Increase the audio sample rate to 48kHz, since higher sample rates always produce better transcription accuracy regardless of vocabulary complexity."
+      },
+      {
+        "id": "b",
+        "text": "Switch from speech-to-text to OCR by having clinicians type their notes, since speech recognition cannot handle specialised medical vocabulary."
+      },
+      {
+        "id": "c",
+        "text": "Implement a Custom Speech model trained with medical terminology phrase lists and audio samples of clinicians using domain-specific vocabulary in realistic hospital conditions."
+      },
+      {
+        "id": "d",
+        "text": "Post-process the transcript with string replacement rules that map common misrecognitions to correct medical terms (e.g., replace 'throw-bow-sigh-toe-pee-knee-ah' with 'thrombocytopenia')."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Azure AI Speech supports Custom Speech models that can be trained with domain-specific vocabulary to dramatically improve recognition accuracy for specialised terminology. For MediBridge, Dr. Amara should create a Custom Speech model trained with: a phrase list containing common medical terms (thrombocytopenia, methylprednisolone, etc.), audio samples of clinicians dictating in realistic hospital conditions with background noise, and training transcripts that pair the audio with correct text. Custom Speech adapts the base speech model to recognise domain-specific vocabulary, accents, and acoustic conditions specific to the deployment environment. This is the recommended approach for any scenario where the base model struggles with specialised terminology, and it is a key topic in the AI-901 exam.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1016",
+    "category": "nlp",
+    "difficulty": "medium",
+    "subtopic": "speech",
+    "type": "single",
+    "prompt": "Nurse Riley Chen, a senior charge nurse at MediBridge Health — a 300-bed teaching hospital piloting AI tools across clinical workflows — wants to understand what text-to-speech sounds like in modern AI systems. The speech implementation must handle real-world audio conditions including background noise, multiple speakers, varied accents, and different recording quality levels across the patient population. What distinguishes modern neural text-to-speech from older speech synthesis?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Neural TTS can only speak in one language."
+      },
+      {
+        "id": "b",
+        "text": "There is no difference."
+      },
+      {
+        "id": "c",
+        "text": "Neural TTS produces much more natural, human-like voices using deep learning."
+      },
+      {
+        "id": "d",
+        "text": "Neural TTS is always slower."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Modern neural text-to-speech uses deep neural networks to produce voices that are nearly indistinguishable from human speech, with natural intonation, stress, and rhythm. Older synthesis sounded robotic. Azure AI Speech SDK for Python provides classes for both real-time and batch speech processing. The SpeechConfig object handles authentication and service configuration for all speech operations.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1017",
+    "category": "generative-ai",
+    "difficulty": "hard",
+    "subtopic": "generative-vs-discriminative",
+    "type": "single",
+    "prompt": "Professor Okonkwo at CloudPath Academy is testing his students on the differences between generative AI and discriminative AI. He presents two AI systems at MediBridge Health: System A receives a chest X-ray image and outputs a classification label ('normal' or 'abnormal') with a confidence score. System B receives clinical notes about a patient and generates a detailed discharge summary letter. He asks students to identify which type of AI each system represents and explain the fundamental difference. Which classification correctly identifies each system and explains the fundamental difference?",
+    "options": [
+      {
+        "id": "a",
+        "text": "System A is discriminative AI (classifies inputs into categories), System B is generative AI (creates new content) — the fundamental difference is that discriminative AI categorises while generative AI creates."
+      },
+      {
+        "id": "b",
+        "text": "System A is generative AI because it generates a confidence score, System B is discriminative because it discriminates between different discharge summary formats."
+      },
+      {
+        "id": "c",
+        "text": "Both systems are discriminative AI because they both make decisions based on input data."
+      },
+      {
+        "id": "d",
+        "text": "Both systems are generative AI because they both produce output from input data."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "System A is discriminative AI because its purpose is to classify input (an X-ray image) into predefined categories ('normal' or 'abnormal'). Discriminative models learn the boundary between categories and assign labels to new inputs based on which side of the boundary they fall on. The confidence score indicates certainty, not generation. System B is generative AI because its purpose is to create new, original content (a discharge summary letter) that did not exist before. Generative models learn the underlying patterns and distribution of their training data and use this knowledge to produce new content. The fundamental difference is: discriminative AI categorises or classifies existing content, while generative AI creates new content. This distinction is a core concept in the AI-901 exam.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1018",
+    "category": "generative-ai",
+    "difficulty": "medium",
+    "subtopic": "cost-management",
+    "type": "single",
+    "prompt": "Priya Sharma at NovaSpark Labs needs to understand the cost implications of their Azure AI architecture. Their application makes three types of API calls daily: 50,000 calls to Azure AI Language for sentiment analysis, 10,000 calls to Azure AI Speech for transcription, and 5,000 calls to GPT-4o through Azure AI Foundry for generating customer response drafts. The CFO asks Priya to explain which service consumes the most budget and what the primary cost driver is for generative AI versus pre-built AI services. What is the PRIMARY cost model difference between generative AI (GPT-4o) and pre-built AI services (Language, Speech)?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Generative AI charges per token (input + output), while pre-built services typically charge per API call or per unit of processed content — making generative AI costs variable based on prompt and response length."
+      },
+      {
+        "id": "b",
+        "text": "All Azure AI services use identical per-call pricing regardless of the type of service or the amount of content processed."
+      },
+      {
+        "id": "c",
+        "text": "Generative AI is free for the first 100,000 calls per month, while pre-built services charge from the first call."
+      },
+      {
+        "id": "d",
+        "text": "Pre-built AI services are always more expensive than generative AI because they use specialised hardware that costs more to operate."
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "The primary cost model difference is that generative AI (GPT-4o and similar models) charges per token for both input prompts and generated output. This means costs scale with the length and complexity of each interaction — a 10-word prompt with a 50-word response costs much less than a 500-word prompt with a 2,000-word response. Pre-built AI services like Azure AI Language and Speech typically charge per API call, per character processed, or per audio minute, with costs that are more predictable for a given volume. This fundamental pricing difference means that controlling prompt and response length is the primary cost optimisation lever for generative AI, while controlling call volume is the primary lever for pre-built services. The CFO should understand that the 5,000 GPT-4o calls may cost more than the 50,000 Language calls if the prompts and responses are lengthy.",
+    "source": "AI-900 / AI-901 exam alignment"
   }
 ]
