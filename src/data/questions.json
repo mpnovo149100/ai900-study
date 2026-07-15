@@ -21172,37 +21172,6 @@
     "source": "AI-900 / AI-901 exam alignment"
   },
   {
-    "id": "q671",
-    "category": "computer-vision",
-    "difficulty": "hard",
-    "subtopic": "document-extraction",
-    "type": "single",
-    "prompt": "A customer service department must implement document information extraction. Put the following steps in the MOST appropriate order. Consider transition-edition practice item 238 in this domain.",
-    "options": [
-      {
-        "id": "a",
-        "text": "Identify required fields and document types → Configure extraction with Content Understanding or a suitable service → Test representative documents → Validate extracted values → Integrate approved outputs into the workflow."
-      },
-      {
-        "id": "b",
-        "text": "Configure extraction with Content Understanding or a suitable service → Identify required fields and document types → Test representative documents → Integrate approved outputs into the workflow → Validate extracted values."
-      },
-      {
-        "id": "c",
-        "text": "Identify required fields and document types → Test representative documents → Configure extraction with Content Understanding or a suitable service → Validate extracted values → Integrate approved outputs into the workflow."
-      },
-      {
-        "id": "d",
-        "text": "Integrate approved outputs into the workflow → Validate extracted values → Test representative documents → Configure extraction with Content Understanding or a suitable service → Identify required fields and document types."
-      }
-    ],
-    "correct": [
-      "a"
-    ],
-    "explanation": "The correct order is: Identify required fields and document types → Configure extraction with Content Understanding or a suitable service → Test representative documents → Validate extracted values → Integrate approved outputs into the workflow. This sequence moves from requirement analysis to selection, testing, and responsible implementation.",
-    "source": "AI-900 / AI-901 exam alignment"
-  },
-  {
     "id": "q672",
     "category": "generative-ai",
     "difficulty": "medium",
