@@ -31844,5 +31844,36 @@
     ],
     "explanation": "The Azure AI Vision SDK's analyze() method accepts multiple visual features in a single API call. Kenji should request three specific features: OBJECTS returns a list of detected objects (products) with bounding box coordinates showing their locations in the image; READ extracts text from any visible labels, tags, or printed/handwritten text; and CAPTION generates a natural language description of the overall image contents. Requesting all three in a single call is more efficient than three separate calls and returns a comprehensive analysis result object. The response contains separate sections for each requested feature, each with its own confidence scores and structured data.",
     "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1014",
+    "category": "ai-workloads",
+    "difficulty": "hard",
+    "subtopic": "responsible-ai",
+    "type": "single",
+    "prompt": "DataForge Solutions is building an AI document classifier for an insurance company. Samira discovers that the model occasionally misclassifies urgent claims as low priority, potentially delaying critical payouts. The assessment is part of a mandatory governance review required before any AI system can be approved for production deployment in the organisation. Which TWO responsible AI principles are MOST relevant to this issue?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reliability and safety, plus Fairness"
+      },
+      {
+        "id": "b",
+        "text": "Transparency and Inclusiveness"
+      },
+      {
+        "id": "c",
+        "text": "Reliability and safety, plus Accountability"
+      },
+      {
+        "id": "d",
+        "text": "Privacy and security, plus Accountability"
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Reliability and safety is relevant because the model is not performing correctly (misclassifying urgent items). Accountability is relevant because the organisation must take responsibility for the impact of these errors on customers. Microsoft's responsible AI framework is a core component of the AI-901 exam. Candidates must understand how each principle applies in real-world AI deployments and how to implement appropriate safeguards.",
+    "source": "AI-900 / AI-901 exam alignment"
   }
 ]
