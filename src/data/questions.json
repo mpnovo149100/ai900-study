@@ -31999,5 +31999,90 @@
     ],
     "explanation": "The primary cost model difference is that generative AI (GPT-4o and similar models) charges per token for both input prompts and generated output. This means costs scale with the length and complexity of each interaction — a 10-word prompt with a 50-word response costs much less than a 500-word prompt with a 2,000-word response. Pre-built AI services like Azure AI Language and Speech typically charge per API call, per character processed, or per audio minute, with costs that are more predictable for a given volume. This fundamental pricing difference means that controlling prompt and response length is the primary cost optimisation lever for generative AI, while controlling call volume is the primary lever for pre-built services. The CFO should understand that the 5,000 GPT-4o calls may cost more than the 50,000 Language calls if the prompts and responses are lengthy.",
     "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1019",
+    "category": "generative-ai",
+    "difficulty": "hard",
+    "subtopic": "foundry-deployment",
+    "type": "single",
+    "prompt": "Dr. Amara Okafor wants a single MediBridge application that lets clinicians (1) upload a scan and ask questions about it AND (2) generate simplified educational diagrams to share with patients. She wants both flows in one app and does not want to maintain two separate codebases. The team is under a delivery review where product, security, and operations stakeholders need a defensible choice. The requirements include realistic input quality, exception handling, cost controls, privacy review, audit notes, and support ownership, but the background deliberately avoids naming the Azure feature so the learner must evaluate the options on their merits. Which Foundry-deployment shape supports this dual-capability application?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Only the gpt-image series — it handles analysis too."
+      },
+      {
+        "id": "b",
+        "text": "Only an Azure AI Search index of medical images."
+      },
+      {
+        "id": "c",
+        "text": "Two deployments — a vision-enabled chat model (gpt-4o) for analysis AND a gpt-image series model for diagram generation — called from the same application."
+      },
+      {
+        "id": "d",
+        "text": "One deployment of gpt-4o handling both flows."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "Vision-enabled chat models (gpt-4o family) analyse images and produce text. Image generation models (gpt-image series) create images from prompts. These are distinct capabilities served by different deployments. A single lightweight app can call BOTH deployments — one for the scan analysis flow, the other for the diagram generation flow — using the same SDK, the same auth, and the same Foundry project. There is no single model in Foundry today that both interprets and synthesises images.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1020",
+    "category": "computer-vision",
+    "difficulty": "medium",
+    "subtopic": "image-generation",
+    "type": "truefalse",
+    "prompt": "NovaSpark's marketing team uses an image generation model to create product visuals. Priya notices that the same text prompt sometimes produces slightly different images each run. Image processing pipelines must account for variable input quality and implement appropriate preprocessing, error handling, and fallback strategies for production reliability. Image generation models produce deterministic output, meaning the same prompt always creates the exact same image.",
+    "options": [
+      {
+        "id": "a",
+        "text": "True"
+      },
+      {
+        "id": "b",
+        "text": "False"
+      }
+    ],
+    "correct": [
+      "b"
+    ],
+    "explanation": "Image generation models include randomness in their generation process, so the same prompt can produce different (but thematically similar) images each time. This is by design and allows for creative variety. Image analysis results include visual features (objects, people, text), tags, captions, and metadata. The API returns confidence scores for each detected element, enabling quality-based filtering.",
+    "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1021",
+    "category": "nlp",
+    "difficulty": "hard",
+    "subtopic": "text-analysis",
+    "type": "single",
+    "prompt": "Maya Jensen, a senior solutions architect at Northern Lights Tech — a 150-person data engineering consultancy specialising in document processing and analytics — reads this Python code: from azure.ai.textanalytics import TextAnalyticsClient client = TextAnalyticsClient(endpoint, credential) result = client.extract_key_phrases(documents=['Azure Content Understanding is a powerful multimodal extraction service.']) for doc in result: for phrase in doc.key_phrases: print(phrase) What will this code output?",
+    "options": [
+      {
+        "id": "a",
+        "text": "The number of characters in the text."
+      },
+      {
+        "id": "b",
+        "text": "The sentiment of the text."
+      },
+      {
+        "id": "c",
+        "text": "Key phrases like 'Content Understanding', 'multimodal extraction service', and 'Azure'."
+      },
+      {
+        "id": "d",
+        "text": "A translation of the text."
+      }
+    ],
+    "correct": [
+      "c"
+    ],
+    "explanation": "The extract_key_phrases method identifies the most important phrases in the text. For this input, it would extract key phrases like 'Content Understanding', 'multimodal extraction service', and possibly 'Azure'. Deployed model endpoints accept HTTP POST requests with JSON payloads containing the prompt and parameters. The response includes the generated text, usage statistics, and metadata about the inference.",
+    "source": "AI-900 / AI-901 exam alignment"
   }
 ]
