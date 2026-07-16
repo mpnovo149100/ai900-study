@@ -82,7 +82,7 @@ export function Report({ queue, progress, onHome }: Props) {
       </section>
 
       <section className="card">
-        <h2>📚 Topics to review</h2>
+        <h2>Topics to review</h2>
         {toReview.length === 0 ? (
           <p className="muted">Nice! Every category is above 80%. 🎉</p>
         ) : (

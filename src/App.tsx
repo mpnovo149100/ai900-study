@@ -6,6 +6,7 @@ import { Home } from "./components/Home";
 import { Study } from "./components/Study";
 import { Report } from "./components/Report";
 import { Profiles } from "./components/Profiles";
+import { Questions } from "./components/Questions";
 import { loadProgress, saveProgress, recordAnswer } from "./lib/progress";
 import type { Progress } from "./lib/progress";
 import {
@@ -25,6 +26,7 @@ export type Filter =
   | { kind: "review" }; // only the ones you got wrong last time
 
 export type DifficultyFilter = Difficulty | "all";
+export type HomeTab = "study" | "questions";
 
 type View =
   | { name: "home" }
@@ -44,6 +46,7 @@ export default function App() {
     activeId ? loadProgress(activeId) : {}
   );
   const [difficulty, setDifficulty] = useState<DifficultyFilter>("all");
+  const [tab, setTab] = useState<HomeTab>("study");
   const [view, setView] = useState<View>({ name: "home" });
 
   const activeProfile = profiles.find((p) => p.id === activeId) ?? null;
@@ -116,7 +119,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="topbar">
-        <h1>🧠 AI-900 · Study</h1>
+        <h1>AI-900 · Study</h1>
         {activeProfile && !showProfiles ? (
           <button
             className="profile-chip"
@@ -144,17 +147,39 @@ export default function App() {
       )}
 
       {!showProfiles && view.name === "home" && (
-        <Home
-          all={pool}
-          progress={progress}
-          countsByCat={counts.byCat}
-          difficulty={difficulty}
-          diffCounts={diffCounts}
-          onDifficulty={setDifficulty}
-          onStart={start}
-          activeId={activeId!}
-          setProgress={setProgress}
-        />
+        <>
+          <nav className="tabs">
+            <button
+              className={`tab${tab === "study" ? " active" : ""}`}
+              onClick={() => setTab("study")}
+            >
+              Study
+            </button>
+            <button
+              className={`tab${tab === "questions" ? " active" : ""}`}
+              onClick={() => setTab("questions")}
+            >
+              Questions
+              <span className="tab-count">{ALL.length}</span>
+            </button>
+          </nav>
+
+          {tab === "study" ? (
+            <Home
+              all={pool}
+              progress={progress}
+              countsByCat={counts.byCat}
+              difficulty={difficulty}
+              diffCounts={diffCounts}
+              onDifficulty={setDifficulty}
+              onStart={start}
+              activeId={activeId!}
+              setProgress={setProgress}
+            />
+          ) : (
+            <Questions all={ALL} progress={progress} />
+          )}
+        </>
       )}
 
       {!showProfiles && view.name === "study" && (
