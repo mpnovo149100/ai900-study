@@ -3,11 +3,13 @@ import type { Question } from "../types";
 import { CATEGORIES, CATEGORY_COLOR } from "../categories";
 import type { CategoryKey } from "../categories";
 import type { Progress } from "../lib/progress";
+import { moduleForCategory } from "../lib/modules";
 
 interface Props {
   queue: Question[];
   progress: Progress;
   onHome: () => void;
+  onOpenStudy?: (slug: string) => void;
 }
 
 interface Row {
@@ -18,7 +20,7 @@ interface Row {
   accuracy: number; // 0..1
 }
 
-export function Report({ queue, progress, onHome }: Props) {
+export function Report({ queue, progress, onHome, onOpenStudy }: Props) {
   const rows = useMemo<Row[]>(() => {
     return CATEGORIES.map((c) => {
       const qs = queue.filter((q) => q.category === c.key && progress[q.id]);
@@ -84,15 +86,25 @@ export function Report({ queue, progress, onHome }: Props) {
       <section className="card">
         <h2>Topics to review</h2>
         {toReview.length === 0 ? (
-          <p className="muted">Nice! Every category is above 80%. 🎉</p>
+          <p className="muted">Nice work — every category is above 80%.</p>
         ) : (
-          <ol className="review-list">
-            {toReview.map((r) => (
-              <li key={r.key}>
-                <strong>{r.label}</strong> — only {Math.round(r.accuracy * 100)}% correct
-              </li>
-            ))}
-          </ol>
+          <ul className="review-list">
+            {toReview.map((r) => {
+              const mod = moduleForCategory(r.key);
+              return (
+                <li key={r.key} className="review-row">
+                  <span>
+                    <strong>{r.label}</strong> — only {Math.round(r.accuracy * 100)}% correct
+                  </span>
+                  {mod && onOpenStudy && (
+                    <button className="link-btn" onClick={() => onOpenStudy(mod.slug)}>
+                      Read the summary →
+                    </button>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
         )}
       </section>
 

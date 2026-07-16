@@ -6,7 +6,7 @@ import { Home } from "./components/Home";
 import { Study } from "./components/Study";
 import { Report } from "./components/Report";
 import { Profiles } from "./components/Profiles";
-import { Questions } from "./components/Questions";
+import { Modules } from "./components/Modules";
 import { loadProgress, saveProgress, recordAnswer } from "./lib/progress";
 import type { Progress } from "./lib/progress";
 import {
@@ -47,7 +47,15 @@ export default function App() {
   );
   const [difficulty, setDifficulty] = useState<DifficultyFilter>("all");
   const [tab, setTab] = useState<HomeTab>("study");
+  const [openModule, setOpenModule] = useState<string | null>(null);
   const [view, setView] = useState<View>({ name: "home" });
+
+  // Vindo do relatório: abrir o resumo respetivo no separador Study.
+  const openStudy = (slug: string) => {
+    setOpenModule(slug);
+    setTab("study");
+    setView({ name: "home" });
+  };
 
   const activeProfile = profiles.find((p) => p.id === activeId) ?? null;
 
@@ -165,6 +173,8 @@ export default function App() {
           </nav>
 
           {tab === "study" ? (
+            <Modules openSlug={openModule} onOpened={() => setOpenModule(null)} />
+          ) : (
             <Home
               all={pool}
               progress={progress}
@@ -176,8 +186,6 @@ export default function App() {
               activeId={activeId!}
               setProgress={setProgress}
             />
-          ) : (
-            <Questions all={ALL} progress={progress} />
           )}
         </>
       )}
@@ -197,6 +205,7 @@ export default function App() {
           queue={view.queue}
           progress={progress}
           onHome={() => setView({ name: "home" })}
+          onOpenStudy={openStudy}
         />
       )}
     </div>

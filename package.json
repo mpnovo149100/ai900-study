@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "validate": "node scripts/validate.mjs"
+    "validate": "node scripts/validate.mjs",
+    "polish": "node scripts/polish.mjs"
   },
   "dependencies": {
+    "marked": "^18.0.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
