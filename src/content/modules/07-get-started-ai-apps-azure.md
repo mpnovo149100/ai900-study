@@ -1053,3 +1053,239 @@ vision expertise**.
   multimodal inputs, **structured outputs, tool use, large-context reasoning across
   modalities**; production-grade agents.
 - **Partner models** — e.g., Anthropic and others with text + image understanding.
+
+### Playground → code
+
+In the playground: select a vision-enabled model, **upload images**, test prompts
+interactively. Once validated, the same capabilities move to code.
+
+**The OpenAI Responses API for images** — the high-level model:
+
+- A **single request** can include **text input and image input together**.
+- Images provided as **URLs or base64-encoded data**.
+- The model processes **both inputs simultaneously**.
+
+Prompt structure: a text instruction ("What objects are visible in this image?") +
+one or more image inputs in the same request.
+
+**The Python pattern** (same skeleton as before, plus the multimodal part):
+
+- Client: `OpenAI(api_key=..., base_url=endpoint)` — Foundry key + endpoint +
+  **deployment name** (the name you gave; base name ≠ deployment name, reiterated
+  again).
+- The new element — the **multi-part message**: `input` with a `user` role whose
+  content is a **list** combining `{"type": "input_text", ...}` and
+  `{"type": "input_image", "image_url": ...}`.
+- Response read from `response.output_text`.
+
+The safari example: load image data + get a natural language prompt from the user →
+build the multi-part message with both → the model responds based on **both the text
+and image**.
+
+## Image generation models in Foundry
+
+### The premise
+
+Vision-capable models match visual information to text; **image generation models do
+this in reverse** — generating images that correspond to text descriptions
+(**text-to-image inferencing**).
+
+**The model lineup** (Microsoft's recommendation: start with the **GPT-Image-1
+family, especially GPT-Image-1.5**):
+
+| Model | Profile | When to use |
+| --- | --- | --- |
+| **GPT-Image-1.5** | The latest and most advanced: high-fidelity, **enterprise-grade** creation and editing, strong prompt alignment, improved consistency across iterations. Supports **text-to-image, image-to-image, and precise editing**. | Branding, marketing, design workflows where **visual accuracy matters**. |
+| **GPT-Image-1** | Powerful general-purpose model, **builds on earlier DALL-E models**; text-to-image, **image variations**, precise editing; widely supported across Foundry tools/APIs (Responses API, agent tools). | Creative applications, prototyping, visual content generation. |
+| **GPT-Image-1-Mini** | Lighter, more **cost-efficient**; same core tasks, optimized for **lower latency/cost** over maximum fidelity. | Experimentation, internal tools, **high-volume generation**. |
+
+All three can be: deployed in a Foundry (Azure OpenAI) resource, tested in the
+Playground, accessed via the **Responses API or image generation APIs**.
+
+Third-party option: **FLUX** (Black Forest Labs) — open-source family producing
+high-quality, **photorealistic, stylistically flexible** images.
+
+**Playground:** deploy, describe the desired image, get the generated result.
+
+### The Python SDK pattern
+
+Requirements: Foundry resource + deployed model (**deployment name = MODEL_NAME**) +
+auth (key or Entra ID) + Responses API calls.
+
+The code's distinctive elements vs. previous units:
+
+- **`tools=[{"type": "image_generation"}]`** — image generation invoked as a tool
+  within the Responses API.
+- The result comes back as an **`image_generation_call`** item in `response.output`,
+  containing **base64 data**.
+- Saving: `base64.b64decode(...)` → write bytes to a `.png` file.
+
+**Base64 note** (definition the exam could lift): images are **binary (raw bytes)**;
+JSON and URLs are **text-only**; Base64 **converts binary into safe ASCII text**,
+allowing binary files to be embedded inside JSON or URLs.
+
+## Video generation models in Foundry
+
+### The models — the Sora family
+
+| Model | Modalities | Notable features | Typical uses |
+| --- | --- | --- | --- |
+| **Sora 1** | **Text → video**; can also use **images as input** to guide creation | OpenAI's first text-to-video in Foundry; short clips, multiple resolutions/durations; via Azure OpenAI Service + Video Playground | Concept videos, storyboards, short animations, visual prototyping |
+| **Sora 2** (public preview) | **Text → video, Image → video, Video → video (remix)** | **Audio generation**, improved realism, **remixing = targeted edits instead of regenerating the whole video**; Azure OpenAI v1 API + Video Playground; built-in Responsible AI safeguards | Marketing/promo videos, cinematic previews and trailers, educational/immersive media |
+
+Two exam-shaped notes:
+
+- **Sora models are currently the ONLY native video generation models in Foundry** —
+  other models may be multimodal (text, image, audio) but **don't generate video
+  output**.
+- Both include **Responsible AI restrictions**: limits on **real people, copyrighted
+  characters, and certain content types**.
+
+**Playground:** deploy, set parameters (**video dimensions and duration**), prompt
+with a description of the desired content; the video takes a few minutes.
+
+### The REST interface — why and how
+
+Definitions the material plants:
+
+- **REST API** = web interface letting programs communicate via HTTP; an **SDK is a
+  developer-friendly toolkit built on top of it** — you can always fall back to raw
+  REST, especially if no SDK exists for your language.
+- **curl** = a command-line tool that makes HTTP requests, sends data, and prints the
+  server's response (run inside **Bash**, a shell/scripting language).
+
+**The asynchronous job pattern** (the core testable concept): video generation is
+**resource-intensive** → runs as an **asynchronous job**:
+
+1. **Create a job** — `POST` to `/openai/v1/videos` with model ("sora-2"), prompt,
+   size, seconds → returns a **video id**.
+2. **Poll for status** — `GET /videos/{video_id}` until **completed** (or failed).
+3. **Download** — `GET /videos/{video_id}/content?variant=video` → the MP4, **only
+   after status is completed**.
+
+Generation typically takes **1–5 minutes** depending on settings. Requirements:
+Foundry resource in a **supported region** + a Sora deployment + auth (API key or
+Entra ID).
+
+## Extract information from documents (Azure Content Understanding)
+
+### The three-step workflow
+
+Azure Content Understanding follows a **model-driven extraction workflow**:
+
+1. **Ingest content** — submit content to the service.
+2. **AI-powered analysis** — a combination of **OCR, speech recognition, natural
+   language understanding, and multimodal AI models**.
+3. **Structured output** — results returned **matching your model**, typically as
+   **JSON** (text-based data format: human-readable, machine-parseable).
+
+### Schemas — the differentiator
+
+The recap first: **basic OCR** reads text from images but **doesn't understand
+meaning, context, or relationships between words**. Content Understanding goes beyond
+with **schema-based extraction**.
+
+- A **schema** describes **what information to extract and how it should be
+  structured** — the specific fields/entities you care about.
+- The invoice example schema: vendor name, invoice number/date, customer
+  name/address, **Items as a collection** (each with description, unit price,
+  quantity, line total), subtotal, tax, shipping, total.
+- Schemas support **structured and nested fields, not just flat text** — identifying
+  structure lets the service understand **relationships between values, something OCR
+  alone cannot do**.
+
+**Semantic application** (the key concept):
+
+- Fields extracted **even if labels differ** — "Invoice No.", "Invoice #", or an
+  **unlabeled number** can all map to `InvoiceNumber` if the analyzer determines they
+  represent the same concept.
+- Fields extracted **even if labels are missing**.
+- The service extracts **expected meaning, not just labels**.
+
+### Analyzers
+
+An **analyzer** = the unit that **takes input, applies AI analysis, produces
+structured results**. Properties:
+
+- Applies **the same extraction logic consistently** to all incoming content — schema
+  reused for every request.
+- Produces **predictable JSON** → easier downstream processing (storage, search,
+  automation).
+
+The flow: choose/create an analyzer → it includes a schema → submit content → schema
+applied → structured JSON back.
+
+**Prebuilt vs. custom:** prebuilt analyzers for common scenarios —
+**prebuilt-invoice, prebuilt-imageSearch, prebuilt-audioSearch,
+prebuilt-videoSearch** — plus custom analyzers tailored to your needs.
+
+**In the Foundry portal:** test with provided examples or your own uploads; see
+detected fields highlighted, values mapped, and the **JSON results**.
+
+### The Python SDK pattern
+
+- Install: `pip install azure-ai-contentunderstanding`.
+- Endpoint shape: `https://<resource>.services.ai.azure.com/`.
+- The distinctive elements:
+  - **ContentUnderstandingClient** with endpoint + AzureKeyCredential.
+  - **Analysis is asynchronous** — a **Long Running Operation (LRO)**:
+    `begin_analyze(analyzer_id="prebuilt-invoice", inputs=[{"url": ...}])` starts it;
+    **`poller.result()` waits for completion (polling handled by the SDK)**. Via raw
+    API you'd poll the **Operation-Location URL** yourself.
+  - Results per content item: **markdown** (the document as structured text) +
+    **fields** (each with **type, value, and confidence score** — e.g.,
+    `CustomerName: string, "MICROSOFT CORPORATION", 0.95`).
+
+## Extract information from audio and video
+
+### The premise
+
+Business information increasingly lives in **multimedia formats** — recorded calls,
+video conference recordings. Azure Content Understanding supports **both audio and
+video** extraction, with the same schema-driven approach as documents.
+
+### Audio extraction
+
+The voicemail example — schema defined:
+
+- Caller / Message summary / Requested actions / Callback number / Alternative
+  contact details.
+
+Given Ava's voice message, the analysis returns each field populated: Caller = "Ava
+from Contoso", the summary of her follow-up about meeting price expectations, the
+requested actions (call back or email), the number (555-12345), and the email
+(`Ava@contoso.com`).
+
+Note what happened conceptually: **transcription (speech recognition) + schema
+application (semantic mapping)** in one pass — the same two-step pattern from
+documents, with STT in place of OCR.
+
+**In the Foundry portal:**
+
+- Select an **audio or video analyzer**, run it on a media file.
+- Review **transcripts** (audio) and extracted insights per your schema.
+- Get **JSON results** for downstream processing.
+- The call recording example: run **prebuilt audio analyzer** → written transcript +
+  specific extracted information, without listening to the whole call.
+
+### Video extraction
+
+The conference room example — schema: Location / In-person attendees / Remote
+attendees / Total attendees. Applied to a camera image: Conference room, 1
+in-person, 3 remote, **4 total** (note: it computed the total — relationships between
+values again).
+
+For a full video recording, the schema could extend to: **attendance counts at time
+intervals, who spoke and what they said, a discussion summary, assigned actions** —
+showing how schemas scale with the medium's richness.
+
+### The client application
+
+Same pattern as documents, different analyzer:
+
+- `ContentUnderstandingClient` + endpoint + `AzureKeyCredential`.
+- **`analyzer_id = "prebuilt-audioSearch"`** (or `prebuilt-videoSearch`).
+- Input as URL → `begin_analyze(...)` → **LRO, SDK polls under the hood** →
+  `poller.result()`.
+- Output per content item: **markdown/transcript** (if provided) + **extracted
+  fields**.
