@@ -69,7 +69,10 @@ function build(): StudyModule[] {
       order: Number(meta.order) || 999,
       categories,
       markdown: body,
-      html: marked.parse(body) as string,
+      // tabelas largas fazem scroll dentro do próprio contentor (evita overflow da página)
+      html: (marked.parse(body) as string)
+        .replace(/<table>/g, '<div class="table-wrap"><table>')
+        .replace(/<\/table>/g, "</table></div>"),
     });
   }
   return mods.sort((a, b) => a.order - b.order || a.title.localeCompare(b.title));
