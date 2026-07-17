@@ -3,6 +3,7 @@ title: Introduction to generative AI and agents
 order: 2
 categories: generative-ai
 ---
+# Introduction to generative AI and agents
 
 ## Large Language Models (LLMs)
 
