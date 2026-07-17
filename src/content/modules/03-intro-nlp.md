@@ -10,15 +10,14 @@ categories: nlp
 
 ### What it is
 
-Text analysis is a **subset of NLP** that enables machines to extract
-**meaning, structure, and insights from unstructured text**. Organizations use
-it to turn customer feedback, support tickets, contracts, and social media posts
-into **actionable intelligence**.
+Text analysis is a **subset of NLP** that enables machines to extract **meaning, structure, and insights from unstructured text**. 
+
+Organizations use
+it to turn customer feedback, support tickets, contracts, and social media posts into **actionable intelligence**.
 
 ### Evolution of the techniques
 
-The techniques evolved over many years, from **simple statistical calculations
-based on term frequency** to **vector-based language models that encapsulate
+The techniques evolved over many years, from **simple statistical calculations based on term frequency** to **vector-based language models that encapsulate
 semantic meaning**.
 
 > Keep this progression in mind — the next units will likely walk through it:
@@ -43,26 +42,20 @@ semantic meaning**.
 7. **Text summarization** — reducing text volume while retaining the salient
    points; example: a one-paragraph summary of a multi-page document.
 
-**Why it's hard:** language is complex and computers struggle to understand it —
-all text analysis techniques ultimately exist to solve the same problem:
+**Why it's hard:** language is complex and computers struggle to understand it — all text analysis techniques ultimately exist to solve the same problem:
 **extracting meaning from natural language text**.
 
 ## Tokenization
 
 ### The basics
 
-The first step in analyzing a body of text (called a **corpus**) is breaking it
-down into **tokens**. For simplicity, think of each distinct word as a token —
-though in reality tokens can be partial words or combinations of words and
-punctuation.
+The first step in analyzing a body of text (called a **corpus**) is breaking it down into **tokens**. For simplicity, think of each distinct word as a token —
+though in reality tokens can be partial words or combinations of words and punctuation.
 
 **Example** — "We choose to go to the moon" becomes tokens with numeric IDs:
-We (1), choose (2), to (3), go (4), the (5), moon (6). Note that "to" appears
-twice but keeps the **same ID (3)** — repeated tokens reuse their identifier.
+We (1), choose (2), to (3), go (4), the (5), moon (6). Note that "to" appears twice but keeps the **same ID (3)** — repeated tokens reuse their identifier.
 
-With each token assigned a discrete value, you can **count token frequency** to
-find the most commonly used terms — which helps identify the **main subject** of
-the text.
+With each token assigned a discrete value, you can **count token frequency** to find the most commonly used terms — which helps identify the **main subject** of the text.
 
 ### Pre-processing techniques
 
@@ -81,25 +74,20 @@ Applied depending on the analysis problem:
 
 ### Frequency analysis
 
-The most obvious approach: after tokenizing, normalizing, and lemmatizing,
-**count how many times each term appears**. The assumption is that frequently
-used terms indicate the document's subjects or themes.
+The most obvious approach: after tokenizing, normalizing, and lemmatizing, **count how many times each term appears**. 
 
-In the material's example (a text about AI in business), the top terms after
-processing were: ai (4), business (3), benefit (2), customer (2), decision (2),
-market (2) — correctly suggesting the document is about **AI and its business
-benefits**.
+The assumption is that frequently used terms indicate the document's subjects or themes.
+
+In the material's example (a text about AI in business), the top terms after processing were: ai (4), business (3), benefit (2), customer (2), decision (2), market (2) — correctly suggesting the document is about **AI and its business benefits**.
 
 ### TF-IDF (Term Frequency – Inverse Document Frequency)
 
-**The problem it solves:** simple frequency works for a single document, but
-fails when you need to differentiate documents within the same corpus. In the
-two samples about Copilot Studio and Microsoft Foundry, the top frequent terms
-were the same in both ("agent", "microsoft", "ai") — they tell you the shared
+**The problem it solves:** simple frequency works for a single document, but fails when you need to differentiate documents within the same corpus. 
+
+In the two samples about Copilot Studio and Microsoft Foundry, the top frequent terms were the same in both ("agent", "microsoft", "ai") — they tell you the shared
 theme, but nothing about what makes each document distinct.
 
-**The idea:** a term is relevant to a document if it appears **often in that
-document but rarely across the rest of the collection**.
+**The idea:** a term is relevant to a document if it appears **often in that document but rarely across the rest of the collection**.
 
 The three-step calculation:
 
@@ -117,20 +105,16 @@ Interpreting scores:
   **discriminative**.
 - **Low TF-IDF** → word is common across many documents.
 
-**Key detail from the example:** "AI", "Microsoft", and "agent" appear in both
-samples (N=2, df=2), so their `IDF = log(2/2) = 0` — they carry **zero
-discriminative weight**. After TF-IDF, the distinctive terms emerged:
-Sample A → "copilot", "studio", "declarative"; Sample B → "code", "develop",
-"foundry" — now you can tell what each document is specifically about.
+**Key detail from the example:** "AI", "Microsoft", and "agent" appear in both samples (N=2, df=2), so their `IDF = log(2/2) = 0` — they carry **zero discriminative weight**. 
+
+After TF-IDF, the distinctive terms emerged:
+Sample A → "copilot", "studio", "declarative"; Sample B → "code", "develop", "foundry" — now you can tell what each document is specifically about.
 
 ### Bag-of-words + machine learning
 
-**Bag-of-words** = a feature extraction technique that represents text as a
-**vector of word frequencies/occurrences**, ignoring grammar and word order.
+**Bag-of-words** = a feature extraction technique that represents text as a **vector of word frequencies/occurrences**, ignoring grammar and word order.
 
-That vector becomes the input for ML algorithms like **Naive Bayes** — a
-probabilistic classifier that applies Bayes' theorem to predict a document's
-probable class based on word frequency.
+That vector becomes the input for ML algorithms like **Naive Bayes** — a probabilistic classifier that applies Bayes' theorem to predict a document's probable class based on word frequency.
 
 Examples:
 
@@ -141,10 +125,7 @@ Examples:
 
 ### TextRank
 
-An **unsupervised, graph-based** algorithm that models text as a network of
-connected nodes — applying the same principle as Google's **PageRank** (which
-ranks pages by links) to text. Key idea: a sentence is important if it's similar
-to many other important sentences.
+An **unsupervised, graph-based** algorithm that models text as a network of connected nodes — applying the same principle as Google's **PageRank** (which ranks pages by links) to text. Key idea: a sentence is important if it's similar to many other important sentences.
 
 The three steps:
 
@@ -155,8 +136,7 @@ The three steps:
 - **Extract top-ranked sentences** — after convergence, the highest-scoring
   sentences form the summary.
 
-In the cloud computing example, sentences 1, 3, and 5 scored highest because they
-connect well to other sentences through shared terminology, producing the summary.
+In the cloud computing example, sentences 1, 3, and 5 scored highest because they connect well to other sentences through shared terminology, producing the summary.
 
 **Extractive vs. abstractive summarization** (exam gold):
 
@@ -165,22 +145,19 @@ connect well to other sentences through shared terminology, producing the summar
 - **Abstractive** — **new language is generated** to summarize the key themes
   (enabled by more recent semantic modeling / generative AI).
 
-TextRank can also work at **word level** for keyword extraction: words become
-nodes, edges represent co-occurrence within a fixed window, top-ranked words = key terms.
+TextRank can also work at **word level** for keyword extraction: words become nodes, edges represent co-occurrence within a fixed window, top-ranked words = key terms.
 
 ## Semantic language models
 
 ### The evolution
 
-As NLP advanced, models emerged that encapsulate the **semantic relationship
-between tokens** — deep learning language models. At their heart: encoding tokens
+As NLP advanced, models emerged that encapsulate the **semantic relationship between tokens** — deep learning language models. At their heart: encoding tokens
 as vectors called **embeddings**.
 
 The progression to keep in mind:
 
 1. **Word2Vec and GloVe** made the vector approach common — tokens represented as
-   **dense, multi-dimensional vectors**, with dimension values assigned during
-   training to reflect each token's semantic characteristics based on usage in the
+   **dense, multi-dimensional vectors**, with dimension values assigned during training to reflect each token's semantic characteristics based on usage in the
    training text. The mathematical relationships between vectors made text analysis
    **more efficient than purely statistical techniques**.
 2. The more recent advance: **attention** — considering each token in context by
@@ -189,13 +166,10 @@ The progression to keep in mind:
 
 ### Representing text as vectors
 
-Vectors are points in multidimensional space — each describes a **direction and
-distance from the origin**. The core principle: **semantically similar tokens →
+Vectors are points in multidimensional space — each describes a **direction and distance from the origin**. The core principle: **semantically similar tokens →
 vectors with similar orientation** (pointing in similar directions).
 
-In the example set: "dog" `[0.8, 0.6, 0.1]` and "cat" `[0.7, 0.5, 0.2]` are
-similar (domestic animals); "puppy" and "kitten" are similar (young animals);
-"tree", "young", "ball" point in distinctly different directions.
+In the example set: "dog" `[0.8, 0.6, 0.1]` and "cat" `[0.7, 0.5, 0.2]` are similar (domestic animals); "puppy" and "kitten" are similar (young animals); "tree", "young", "ball" point in distinctly different directions.
 
 ### Finding related terms — cosine similarity
 
@@ -217,15 +191,12 @@ You can add/subtract vectors and search for the token whose vector matches the r
 - **cat + young = kitten**
 - And in reverse: **puppy − young = dog**, **kitten − young = cat**
 
-This works because the vector for "young" encodes the **semantic transformation**
-from adult animal to its young counterpart. **Important caveat:** in practice,
-arithmetic rarely produces exact matches — you search for the **closest (most
-similar) vector** to the result.
+This works because the vector for "young" encodes the **semantic transformation** from adult animal to its young counterpart. **Important caveat:** in practice,
+arithmetic rarely produces exact matches — you search for the **closest (most similar) vector** to the result.
 
 ### Analogical reasoning
 
-Vector arithmetic answers analogies: "puppy is to dog as kitten is to ?" →
-calculate **`kitten − puppy + dog = [0.7, 0.5, 0.2] = cat`**. (This is the famous
+Vector arithmetic answers analogies: "puppy is to dog as kitten is to ?" → calculate **`kitten − puppy + dog = [0.7, 0.5, 0.2] = cat`**. (This is the famous
 **"king − man + woman = queen"** pattern.)
 
 ### Applying semantic models to text analysis tasks
