@@ -31818,5 +31818,36 @@
     ],
     "explanation": "When using the Azure OpenAI Responses API with a vision-enabled model, the image must be included as an input image content item. The correct content item type is {'type': 'input_image', 'image_url': image_url}. Microsoft's Azure OpenAI Responses API documentation states that the Responses API supports image inputs, and multimodal requests use structured input content items for the request. Why the other options are incorrect: image_base64 = base64 data can be used as the image data format, but the content item type is still input_image. image_generation = related to generating images, not providing an image for analysis. output_image = would refer to generated output, not image input. input_image = correct.",
     "source": "AI-900 / AI-901 exam alignment"
+  },
+  {
+    "id": "q1027",
+    "category": "generative-ai",
+    "difficulty": "easy",
+    "subtopic": "agents",
+    "type": "single",
+    "prompt": "You need to create an AI agent in Microsoft Foundry that follows a specific role and behavior when responding to users. What should you configure?",
+    "options": [
+      {
+        "id": "a",
+        "text": "system instructions"
+      },
+      {
+        "id": "b",
+        "text": "temperature"
+      },
+      {
+        "id": "c",
+        "text": "tokens per minute (TPM)"
+      },
+      {
+        "id": "d",
+        "text": "max completion tokens"
+      }
+    ],
+    "correct": [
+      "a"
+    ],
+    "explanation": "An agent's role and durable behavior are defined by its system instructions (the system prompt). Temperature controls randomness/creativity, tokens per minute (TPM) is a deployment rate limit, and max completion tokens caps response length — none of these define the agent's role or behavior.",
+    "source": "AI-900 / AI-901 exam alignment"
   }
 ]
