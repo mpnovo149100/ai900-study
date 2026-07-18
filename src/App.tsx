@@ -96,7 +96,15 @@ export default function App() {
     } else if (filter.kind === "review") {
       queue = pool.filter((q) => progress[q.id] && !progress[q.id].lastCorrect);
     }
-    queue = shuffle(queue);
+    if (filter.kind === "review") {
+      queue = shuffle(queue);
+    } else {
+      // continuar de onde ficaste: as ainda não respondidas primeiro,
+      // depois as já feitas (para poderes rever) — nunca se perde progresso
+      const unanswered = shuffle(queue.filter((q) => !progress[q.id]));
+      const answered = shuffle(queue.filter((q) => progress[q.id]));
+      queue = [...unanswered, ...answered];
+    }
     if (queue.length === 0) return;
     setView({ name: "study", queue });
   };

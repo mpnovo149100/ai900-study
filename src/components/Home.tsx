@@ -88,6 +88,7 @@ export function Home({
         <ul className="cat-list">
           {CATEGORIES.map((c) => {
             const n = countsByCat[c.key] ?? 0;
+            const done = all.filter((q) => q.category === c.key && progress[q.id]).length;
             return (
               <li key={c.key}>
                 <button
@@ -101,7 +102,7 @@ export function Home({
                     {c.label}
                   </span>
                   <span className="muted">
-                    {c.weight} · {n} questions
+                    {done > 0 ? `${done}/${n} done` : `${c.weight} · ${n} questions`}
                   </span>
                 </button>
               </li>
