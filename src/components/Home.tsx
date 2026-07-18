@@ -88,7 +88,7 @@ export function Home({
         <ul className="cat-list">
           {CATEGORIES.map((c) => {
             const n = countsByCat[c.key] ?? 0;
-            const done = all.filter((q) => q.category === c.key && progress[q.id]).length;
+            const done = all.filter((q) => q.category === c.key && progress[q.id]?.lastCorrect).length;
             return (
               <li key={c.key}>
                 <button

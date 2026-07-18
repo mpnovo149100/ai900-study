@@ -89,20 +89,23 @@ export default function App() {
     [difficulty]
   );
 
+  // já dominada = respondida e acertada da última vez
+  const mastered = (q: Question) => progress[q.id]?.lastCorrect === true;
+
   const start = (filter: Filter) => {
-    let queue = pool;
-    if (filter.kind === "category") {
-      queue = pool.filter((q) => q.category === filter.category);
-    } else if (filter.kind === "review") {
-      queue = pool.filter((q) => progress[q.id] && !progress[q.id].lastCorrect);
-    }
+    let queue: Question[];
     if (filter.kind === "review") {
-      queue = shuffle(queue);
+      // só as que erraste
+      queue = shuffle(pool.filter((q) => progress[q.id] && !progress[q.id].lastCorrect));
+    } else if (filter.kind === "category") {
+      // não repetir as que já acertaste; ficam as ainda por fazer + as que erraste
+      const inCat = pool.filter((q) => q.category === filter.category);
+      const remaining = inCat.filter((q) => !mastered(q));
+      queue = shuffle(remaining.length > 0 ? remaining : inCat);
     } else {
-      // continuar de onde ficaste: as ainda não respondidas primeiro,
-      // depois as já feitas (para poderes rever) — nunca se perde progresso
-      const unanswered = shuffle(queue.filter((q) => !progress[q.id]));
-      const answered = shuffle(queue.filter((q) => progress[q.id]));
+      // all: continuar — não respondidas primeiro, depois as já feitas (para rever)
+      const unanswered = shuffle(pool.filter((q) => !progress[q.id]));
+      const answered = shuffle(pool.filter((q) => progress[q.id]));
       queue = [...unanswered, ...answered];
     }
     if (queue.length === 0) return;
